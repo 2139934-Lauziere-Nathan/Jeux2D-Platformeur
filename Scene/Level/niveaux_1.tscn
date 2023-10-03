@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dfc7gvfdyypja"]
+
+[node name="Niveaux1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="TileMap"]
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap/ParallaxBackground"]
