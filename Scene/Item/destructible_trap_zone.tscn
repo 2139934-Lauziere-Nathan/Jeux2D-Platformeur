@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://m67nkp4qxe7e"]
+
+[ext_resource type="Script" path="res://Scripts/DestructibleTrapZone.gd" id="1_mkled"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trukl"]
+
+[node name="Destructible_trap_Zone" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_mkled")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_trukl")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

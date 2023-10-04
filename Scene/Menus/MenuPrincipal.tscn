@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://gnd5npbtoqtk"]
+[gd_scene load_steps=4 format=3 uid="uid://gnd5npbtoqtk"]
 
 [ext_resource type="Texture2D" uid="uid://buv2pd3yrw3h1" path="res://Assets/Background/placeholder.png" id="1_oi84k"]
+[ext_resource type="Script" path="res://Scripts/Start.gd" id="1_v501f"]
+[ext_resource type="Script" path="res://Scripts/Quit.gd" id="2_ri5bw"]
 
 [node name="MenuPrincipal" type="Node2D"]
 
@@ -13,10 +15,12 @@ offset_bottom = 40.0
 [node name="Start" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Start"
+script = ExtResource("1_v501f")
 
 [node name="Quit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+script = ExtResource("2_ri5bw")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
 
