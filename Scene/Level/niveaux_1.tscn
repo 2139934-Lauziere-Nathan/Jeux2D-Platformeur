@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfc7gvfdyypja"]
+[gd_scene load_steps=8 format=3 uid="uid://dfc7gvfdyypja"]
 
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="1_lcucc"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="2_eakjd"]
 [ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="2_sxt0m"]
-[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="3_37kcf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l7q6d"]
 
@@ -2267,6 +2266,3 @@ layer_0/tile_data = PackedInt32Array(458752, 65536, 0, 458753, 131072, 0, 458754
 [node name="Sprite2D" type="Sprite2D" parent="TileMap/ParallaxBackground"]
 position = Vector2(956, 244)
 texture = ExtResource("2_eakjd")
-
-[node name="PersoPrincipal" parent="TileMap" instance=ExtResource("3_37kcf")]
-position = Vector2(43, 79)
