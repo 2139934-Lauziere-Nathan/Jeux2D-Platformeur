@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://br82c1mje4cnh"]
+[gd_scene load_steps=6 format=3 uid="uid://br82c1mje4cnh"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_k8ib8"]
 [ext_resource type="Texture2D" uid="uid://bwkj8kpbrl5r1" path="res://Assets/Sprite/Sprite/pixil-layer-Background.png" id="2_etr2x"]
+[ext_resource type="Script" path="res://Scene/Perso/VieLabel.gd" id="3_la54i"]
+[ext_resource type="Script" path="res://Scene/Perso/Token.gd" id="4_g42xa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x23i7"]
 size = Vector2(20, 33)
@@ -32,5 +34,10 @@ offset_bottom = 40.0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="CharacterBody2D/Control/CanvasLayer/VBoxContainer"]
+[node name="Vie" type="Label" parent="CharacterBody2D/Control/CanvasLayer/VBoxContainer"]
 layout_mode = 2
+script = ExtResource("3_la54i")
+
+[node name="Token" type="Label" parent="CharacterBody2D/Control/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_g42xa")

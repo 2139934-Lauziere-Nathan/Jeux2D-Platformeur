@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbyyp8drtl5hh"]
+
+[ext_resource type="Script" path="res://Global.gd" id="1_mjvo7"]
+[ext_resource type="PackedScene" uid="uid://dfc7gvfdyypja" path="res://Scene/Level/niveaux_1.tscn" id="2_ykxpw"]
+[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="3_arjwf"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_mjvo7")
+
+[node name="Niveaux1" parent="." instance=ExtResource("2_ykxpw")]
+
+[node name="PersoPrincipal" parent="." instance=ExtResource("3_arjwf")]
+position = Vector2(94, 34)

@@ -1026,6 +1026,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_l7q6d")
 sources/0 = SubResource("TileSetAtlasSource_btj8p")
 
 [node name="Niveaux1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-65.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_mhswd")
