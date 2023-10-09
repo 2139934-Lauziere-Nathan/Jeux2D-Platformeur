@@ -2254,7 +2254,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_l7q6d")
 sources/0 = SubResource("TileSetAtlasSource_btj8p")
 sources/1 = SubResource("TileSetAtlasSource_uoar0")
 
-[node name="Niveaux1" type="Node2D"]
+[node name="Niveau_1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_mhswd")
