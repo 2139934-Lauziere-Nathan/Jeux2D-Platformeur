@@ -19,6 +19,7 @@ shape = SubResource("RectangleShape2D_x23i7")
 texture = ExtResource("2_etr2x")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
 
 [node name="Control" type="Control" parent="CharacterBody2D"]
 layout_mode = 3
