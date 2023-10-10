@@ -3,10 +3,12 @@ var max_life = 3
 var life = 3
 var etas = 0
 var token = 0
+var niveau = 0
 #zero menu , 1  - niveau 1 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	# Load the level scene
+
 	
 	pass # Replace with function body.
 func _moinUneVie():
@@ -23,6 +25,8 @@ func death():
 		print_debug("mortis")
 		etas = 1
 		get_tree().change_scene_to_file("res://Scene/Menus/game_over_screen.tscn")
+		
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,4 +35,8 @@ func _process(delta):
 		death()
 	if etas != 1:
 		death()
+	if niveau == 2:
+		get_tree().change_scene_to_file("res://Scene/Level/niveaux_%s.tscn"%(niveau))
+		
+		
 	
