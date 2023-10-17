@@ -174,7 +174,7 @@ size = Vector2(20, 33)
 
 [node name="PersoPrincipal" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Dave"]]
 script = ExtResource("1_1i850")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
