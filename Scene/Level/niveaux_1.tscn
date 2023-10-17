@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfc7gvfdyypja"]
+[gd_scene load_steps=11 format=3 uid="uid://dfc7gvfdyypja"]
 
-[ext_resource type="Script" path="res://Scripts/niveaux_1.gd" id="1_4whow"]
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="1_lcucc"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="2_eakjd"]
 [ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="2_sxt0m"]
@@ -2258,7 +2257,6 @@ sources/0 = SubResource("TileSetAtlasSource_btj8p")
 sources/1 = SubResource("TileSetAtlasSource_uoar0")
 
 [node name="Niveaux1" type="Node2D"]
-script = ExtResource("1_4whow")
 metadata/_edit_horizontal_guides_ = [-65.0]
 
 [node name="TileMap" type="TileMap" parent="."]
