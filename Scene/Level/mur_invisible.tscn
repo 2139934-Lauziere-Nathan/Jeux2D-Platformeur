@@ -1,10 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn5ch174bsd52"]
+[gd_scene format=3 uid="uid://cxx0qq1oo0wqp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofus7"]
-size = Vector2(20, 332)
-
-[node name="mur_Invisible" type="Area2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -156)
-shape = SubResource("RectangleShape2D_ofus7")
+[node name="Node2D" type="Node2D"]
