@@ -13,7 +13,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print_debug("%s"%(niveaux+1))
+
 	Global.niveau = Global.niveau+1
 	#get_tree().change_scene_to_file("res://Scene/Level/niveaux_%s.tscn"%(niveaux+1))
 	pass # Replace with function body.
