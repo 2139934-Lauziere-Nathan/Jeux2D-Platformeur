@@ -20,37 +20,37 @@ position = Vector2(656, 263)
 [node name="TrapZone2" parent="Niveaux1" instance=ExtResource("3_ilqfd")]
 position = Vector2(1040, 643)
 
-[node name="Token" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token6" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(891, 848)
 
-[node name="Token2" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token7" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(1041, 605)
 
-[node name="Token3" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token8" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(1205, 489)
 
-[node name="Token4" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token9" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(1479, 509)
 
-[node name="Token5" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token10" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(1484, 304)
 
-[node name="Token6" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token11" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(1189, 148)
 
-[node name="Token7" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token12" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(655, 215)
 
-[node name="Token8" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token13" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(520, 158)
 
-[node name="Token9" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token14" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(360, 53)
 
-[node name="Token10" parent="Niveaux1" instance=ExtResource("4_bd85g")]
+[node name="Token15" parent="Niveaux1" instance=ExtResource("4_bd85g")]
 position = Vector2(1027, 100)
 
-[node name="flagFinNiveau" parent="Niveaux1" instance=ExtResource("4_nmrhu")]
+[node name="flagFinNiveau2" parent="Niveaux1" instance=ExtResource("4_nmrhu")]
 position = Vector2(874, 98)
 
 [node name="Ennemis" parent="Niveaux1" instance=ExtResource("6_hdr5b")]

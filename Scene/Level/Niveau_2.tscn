@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bfmot12doia1a" path="res://Scene/Item/ladder.tscn" id="12_hwnmf"]
 [ext_resource type="PackedScene" uid="uid://215cm2qn1ly4" path="res://Scene/Item/item_heal.tscn" id="13_g3f2g"]
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="14_0t32r"]
-[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_invisible.tscn" id="15_ur66n"]
+[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_Invisible.tscn" id="15_ur66n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qkhok"]
 
