@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfmot12doia1a"]
+
+[ext_resource type="Script" path="res://Scripts/Ladder.gd" id="1_2b3aw"]
+[ext_resource type="Texture2D" uid="uid://vlv3641scu0a" path="res://Assets/Sprite/ladder.png" id="2_4g20t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg61g"]
+size = Vector2(32, 143)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgmlb"]
+texture = ExtResource("2_4g20t")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l13p6"]
+sources/0 = SubResource("TileSetAtlasSource_tgmlb")
+
+[node name="Ladder" type="Area2D"]
+script = ExtResource("1_2b3aw")
+
+[node name="Laddercoll" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_rg61g")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_l13p6")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 0, 0, 65535, 0, 0, 0, 0, 0, -65536, 0, 0, 65536, 0, 0, 131071, 0, 0, 196607, 0, 0, 131072, 0, 0, -131072, 0, 0, -65537, 0, 0, -131073, 0, 0, -196608, 0, 0, 262143, 0, 0, 196608, 0, 0, 327679, 0, 0, 262144, 0, 0, -262144, 0, 0, -196609, 0, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

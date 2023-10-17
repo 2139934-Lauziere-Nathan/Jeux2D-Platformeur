@@ -6,20 +6,17 @@ var life = Global.life
 var is_jumping = false
 var double_saut = 0
 var dash = 1
+var can_Dash = false
+var climbing = false
 
 @onready var _animated_sprite = $AnimatedSprite2D
-@onready var _collision = $CollisionShape2D
 
 # Get the gravity from the project settings so you can sync with rigid body nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") 
-	
 
-	
+
+
 func _physics_process(delta):
-		# Get the input direction.
-	var direction = Input.get_axis("mouvement-gauche", "mouvement-droit")
-	velocity.x = direction * speed
-	velocity.y += gravity * delta
 	
 #<----------ANIMATIONS-------------------------------------->
 	if is_on_floor():
@@ -33,22 +30,32 @@ func _physics_process(delta):
 			_animated_sprite.flip_h = true
 			_animated_sprite.position = Vector2(-16, -2)
 			_animated_sprite.play("run")
+			
+	if climbing:
+		_animated_sprite.play("idle")
 		
 	if velocity.x == 0 and is_on_floor() and !Input.is_action_pressed("saut"):
 		_animated_sprite.play("idle")
 	
 	
 #<-------------------------MOUVEMENTS-------------------------------------->
-	if Input.is_action_pressed("mouvement-droit"):
-		_animated_sprite.flip_h = false
-		_animated_sprite.position = Vector2(6, -2)
-	if Input.is_action_pressed("mouvement-gauche"):
-		_animated_sprite.flip_h = true
-		_animated_sprite.position = Vector2(-16, -2)
+	if is_on_floor():
+		double_saut = 1
+		dash = 1
 	
-	
-	
-	
+	# Get the input direction.
+	var direction = Input.get_axis("mouvement-gauche", "mouvement-droit")
+	velocity.x = direction * speed
+	if not climbing:
+		velocity.y += gravity * delta
+	elif climbing:
+		velocity.y = 0
+		if Input.is_action_pressed("saut"):
+			velocity.y = -speed
+		elif Input.is_action_pressed("tomber"):
+			velocity.y = speed
+
+#<-------------------------SAUTS-------------------------------------->
 	if Input.is_action_just_pressed("saut") and is_on_floor():
 			velocity.y = (0.8 -jump_speed )
 			double_saut = 1
@@ -60,16 +67,16 @@ func _physics_process(delta):
 			double_saut = 0
 			_animated_sprite.play("double_saut")
 			
-			
-	if Input.is_action_just_pressed("Dash") and !is_on_floor() and dash == 1:
+	
+	if Input.is_action_just_pressed("Dash") and !is_on_floor() and dash == 1 and can_Dash == true:
 		velocity.x = (direction * speed) * 15
 		dash = 0
 	
-	
-	if is_on_floor():
-		double_saut = 1
-		dash = 1
-
-
+		
 	move_and_slide()
+
+
+#<-------------------------FUNCTION-------------------------------------->
+func unlock_dash():
+	can_Dash = true
 

@@ -174,22 +174,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x23i7"]
 size = Vector2(20, 33)
 
-[node name="PersoPrincipal" type="Node2D"]
+[node name="Perso_Principal" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Dave"]]
 script = ExtResource("1_1i850")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(6, -7)
 sprite_frames = SubResource("SpriteFrames_xkynh")
 animation = &"run"
-frame_progress = 0.950007
+frame_progress = 0.591179
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-3, 1)
+position = Vector2(-3, 4)
 shape = SubResource("RectangleShape2D_x23i7")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
 
 [node name="Control" type="Control" parent="CharacterBody2D"]
 layout_mode = 3

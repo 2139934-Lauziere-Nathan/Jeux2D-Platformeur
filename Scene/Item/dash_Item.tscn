@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdjkjpsg330ds"]
+
+[ext_resource type="Script" path="res://Scripts/dash_Item.gd" id="1_s87bj"]
+[ext_resource type="Texture2D" uid="uid://celhhl8e6als8" path="res://Assets/Sprite/Dash_item.png" id="2_ypid1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1y2r2"]
+size = Vector2(20, 12)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("1_s87bj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_1y2r2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(0.145034, 0.107131)
+texture = ExtResource("2_ypid1")
+
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
