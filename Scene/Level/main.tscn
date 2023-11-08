@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbyyp8drtl5hh"]
+[gd_scene load_steps=8 format=3 uid="uid://dbyyp8drtl5hh"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_mjvo7"]
 [ext_resource type="PackedScene" uid="uid://dfc7gvfdyypja" path="res://Scene/Level/niveaux_1.tscn" id="2_ykxpw"]
@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="4_bd85g"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="4_nmrhu"]
 [ext_resource type="PackedScene" uid="uid://c1ot83imugdos" path="res://Scene/Perso/ennemis.tscn" id="6_hdr5b"]
-[ext_resource type="PackedScene" uid="uid://dbgm0blqym5da" path="res://Scene/Perso/perso_principal_2(exclusivement_cree_pour_l'evaluation).tscn" id="7_crttx"]
-[ext_resource type="PackedScene" uid="uid://cyck7fqcq7jov" path="res://Scene/Menus/hud.tscn" id="8_f7u1r"]
+[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="7_2o3sw"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_mjvo7")
@@ -56,8 +55,5 @@ position = Vector2(874, 98)
 [node name="Ennemis" parent="Niveaux1" instance=ExtResource("6_hdr5b")]
 position = Vector2(494, 38)
 
-[node name="PersoPrincipal2(exclusivement cree pour l\'evaluation)" parent="." instance=ExtResource("7_crttx")]
-position = Vector2(106, 42)
-
-[node name="HUD" parent="PersoPrincipal2(exclusivement cree pour l\'evaluation)" instance=ExtResource("8_f7u1r")]
-position = Vector2(1, 0)
+[node name="PersoPrincipal" parent="." instance=ExtResource("7_2o3sw")]
+position = Vector2(176, -26)

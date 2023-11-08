@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://br82c1mje4cnh"]
+[gd_scene load_steps=29 format=3 uid="uid://br82c1mje4cnh"]
 
 [ext_resource type="Script" path="res://Scripts/Perso_Principal.gd" id="1_1i850"]
 [ext_resource type="Texture2D" uid="uid://bes75tug1e7o4" path="res://Assets/Sprite/Sprite/spriteBiker/Biker_doublejump.png" id="2_31q0k"]
 [ext_resource type="Texture2D" uid="uid://dqb2851urt7pe" path="res://Assets/Sprite/Sprite/spriteBiker/Biker_idle.png" id="2_clxju"]
 [ext_resource type="Texture2D" uid="uid://dsdqf2v6ixtaj" path="res://Assets/Sprite/Sprite/spriteBiker/Biker_run.png" id="4_mtm2s"]
 [ext_resource type="Texture2D" uid="uid://dm7a3rdfdvara" path="res://Assets/Sprite/Sprite/spriteBiker/Biker_jump.png" id="5_xyg7q"]
+[ext_resource type="PackedScene" uid="uid://cyck7fqcq7jov" path="res://Scene/Menus/hud.tscn" id="6_kdybc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pp1uh"]
 atlas = ExtResource("2_31q0k")
@@ -189,3 +190,8 @@ shape = SubResource("RectangleShape2D_x23i7")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(2, 2)
+
+[node name="HUD" parent="." instance=ExtResource("6_kdybc")]
+
+[connection signal="signalToken" from="CharacterBody2D" to="HUD" method="_on_character_body_2d_signal_token"]
+[connection signal="signalVie" from="CharacterBody2D" to="HUD" method="_on_character_body_2d_signal_vie"]

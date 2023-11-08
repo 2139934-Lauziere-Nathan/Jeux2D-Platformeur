@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfc7gvfdyypja"]
+[gd_scene load_steps=12 format=3 uid="uid://dfc7gvfdyypja"]
 
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="1_lcucc"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="2_eakjd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="4_fh5s8"]
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="5_7eoxb"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="6_5wbs1"]
+[ext_resource type="PackedScene" uid="uid://215cm2qn1ly4" path="res://Scene/Item/item_heal.tscn" id="7_vvl87"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l7q6d"]
 
@@ -2297,3 +2298,6 @@ position = Vector2(354, 6)
 
 [node name="flagFinNiveau" parent="." instance=ExtResource("6_5wbs1")]
 position = Vector2(1055, 872)
+
+[node name="ItemHeal" parent="." instance=ExtResource("7_vvl87")]
+position = Vector2(590, 29)

@@ -1,6 +1,6 @@
 extends Area2D
 
-var a =0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -13,7 +13,9 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	if a == 1:
-		Global._moinUneVie()
-	a=1
+	if $Timer.is_stopped() && body.has_method("domage"):
+		body.domage()
+		
+		
+	
 	pass # Replace with function body.

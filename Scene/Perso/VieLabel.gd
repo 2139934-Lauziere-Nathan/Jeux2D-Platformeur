@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = str("life = ",Global.life)
+	#text = str("life = ",Global.life)
 	pass

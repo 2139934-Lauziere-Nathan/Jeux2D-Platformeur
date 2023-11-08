@@ -3,12 +3,15 @@ extends CharacterBody2D
 var speed = 300.0
 var jump_speed = 400.0
 var life = Global.life
+var vie = 3
+var token = 0
 var is_jumping = false
 var double_saut = 0
 var dash = 1
 var can_Dash = false
 var climbing = false
-
+signal signalVie(vie)
+signal signalToken(token)
 @onready var _animated_sprite = $AnimatedSprite2D
 
 # Get the gravity from the project settings so you can sync with rigid body nodes.
@@ -17,7 +20,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
-	
+	emit_signal("signalVie", vie)
+	emit_signal("signalToken", token)
 #<----------ANIMATIONS-------------------------------------->
 	if is_on_floor():
 		if Input.is_action_pressed("mouvement-droit"):
@@ -72,7 +76,7 @@ func _physics_process(delta):
 		velocity.x = (direction * speed) * 15
 		dash = 0
 	
-		
+	mort()
 	move_and_slide()
 
 
@@ -80,3 +84,13 @@ func _physics_process(delta):
 func unlock_dash():
 	can_Dash = true
 
+func plustoken():
+	token = token+1
+func plusvie():
+	vie = vie+1
+func mort():
+	if vie <= 0:
+		get_tree().change_scene_to_file("res://Scene/Menus/game_over_screen.tscn")
+func domage():
+	vie = vie-1
+	mort()

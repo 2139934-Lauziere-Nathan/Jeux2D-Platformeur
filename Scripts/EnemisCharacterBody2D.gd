@@ -31,7 +31,7 @@ func _physics_process(delta):
 	
 	if state == WALK:
 		timer_run = timer_run - 1
-		print_debug(randomNumber)
+
 		if randomNumber == 2:
 			direction = 1
 		else:
@@ -67,11 +67,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 var cooldown = 0
-func attack():
-	if cooldown == 0:
-		cooldown = 50
-		Global.life= Global.life-1
-	cooldown = cooldown-1
+
 	
 func detect_fall():
 	if not ray2D.is_colliding() and is_on_floor():
@@ -81,5 +77,8 @@ func detect_fall():
 
 func _on_area_2d_body_entered(body):
 	state = ATTACK
-	attack()
+	print_debug("bodyentered")
+	if body.has_method("domage"):
+		body.domage()
+		
 	pass # Replace with function body.
