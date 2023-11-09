@@ -1,45 +1,37 @@
-[gd_scene load_steps=31 format=3 uid="uid://c1ot83imugdos"]
+[gd_scene load_steps=29 format=3 uid="uid://c1ot83imugdos"]
 
 [ext_resource type="Script" path="res://Scripts/EnemisCharacterBody2D.gd" id="1_6xm0g"]
+[ext_resource type="Texture2D" uid="uid://oqtftxvmo8jn" path="res://Assets/Sprite/Sprite/spriteEnemis/Punk_punch.png" id="2_dd8qc"]
 [ext_resource type="Texture2D" uid="uid://b4p6akdjru14b" path="res://Assets/Sprite/Sprite/spriteEnemis/Punk_idle.png" id="2_en6cx"]
-[ext_resource type="Texture2D" uid="uid://dv5pory3onwxb" path="res://Assets/Sprite/Sprite/spriteEnemis/Punk_attack2.png" id="2_vmofb"]
 [ext_resource type="Texture2D" uid="uid://ciqnaspy8x6bi" path="res://Assets/Sprite/Sprite/spriteEnemis/Punk_jump.png" id="3_dbut5"]
 [ext_resource type="Texture2D" uid="uid://c8ykpjt77x238" path="res://Assets/Sprite/Sprite/spriteEnemis/Punk_run.png" id="4_uxj78"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3wap"]
 size = Vector2(20, 35)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_antlx"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(0, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm1yn"]
+atlas = ExtResource("2_dd8qc")
+region = Rect2(0, 0, 45, 47)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sym30"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(48, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7n8y"]
+atlas = ExtResource("2_dd8qc")
+region = Rect2(45, 0, 45, 47)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iubfj"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(96, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgmgi"]
+atlas = ExtResource("2_dd8qc")
+region = Rect2(90, 0, 45, 47)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ckpmc"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(144, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_co5yk"]
+atlas = ExtResource("2_dd8qc")
+region = Rect2(135, 0, 45, 47)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_723ws"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(192, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmdhg"]
+atlas = ExtResource("2_dd8qc")
+region = Rect2(180, 0, 45, 47)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gv0hw"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mxtot"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(288, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cd0eh"]
-atlas = ExtResource("2_vmofb")
-region = Rect2(336, 0, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm1ox"]
+atlas = ExtResource("2_dd8qc")
+region = Rect2(225, 0, 45, 47)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ugo22"]
 atlas = ExtResource("2_en6cx")
@@ -101,28 +93,22 @@ region = Rect2(240, 0, 48, 48)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_antlx")
+"texture": SubResource("AtlasTexture_gm1yn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sym30")
+"texture": SubResource("AtlasTexture_q7n8y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iubfj")
+"texture": SubResource("AtlasTexture_dgmgi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ckpmc")
+"texture": SubResource("AtlasTexture_co5yk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_723ws")
+"texture": SubResource("AtlasTexture_lmdhg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gv0hw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mxtot")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cd0eh")
+"texture": SubResource("AtlasTexture_mm1ox")
 }],
 "loop": false,
 "name": &"Attack",
@@ -187,6 +173,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxcjm"]
+size = Vector2(11, 3)
 
 [node name="Ennemis" type="Node2D"]
 
@@ -198,11 +185,11 @@ position = Vector2(-11, 6.5)
 shape = SubResource("RectangleShape2D_w3wap")
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(3, -19)
+position = Vector2(18, -21)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(-1.40625, 1.75)
-scale = Vector2(0.949128, 0.922222)
+position = Vector2(-5.60036, 2)
+scale = Vector2(0.691682, 0.922222)
 sprite_frames = SubResource("SpriteFrames_2v37u")
 animation = &"Attack"
 
@@ -215,8 +202,12 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-position = Vector2(9, 8)
+position = Vector2(5, 9)
 shape = SubResource("RectangleShape2D_xxcjm")
+
+[node name="RayCast2D2" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-21, 6)
+target_position = Vector2(39, 0)
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
