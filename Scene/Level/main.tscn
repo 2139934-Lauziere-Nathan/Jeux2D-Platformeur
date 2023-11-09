@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbyyp8drtl5hh"]
+[gd_scene load_steps=6 format=3 uid="uid://dbyyp8drtl5hh"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_mjvo7"]
 [ext_resource type="PackedScene" uid="uid://dfc7gvfdyypja" path="res://Scene/Level/niveaux_1.tscn" id="2_ykxpw"]
-[ext_resource type="PackedScene" uid="uid://dyfq0uth6uhjb" path="res://Scene/Item/trap_zone.tscn" id="3_ilqfd"]
-[ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="4_bd85g"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="4_nmrhu"]
 [ext_resource type="PackedScene" uid="uid://c1ot83imugdos" path="res://Scene/Perso/ennemis.tscn" id="6_hdr5b"]
 [ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="7_2o3sw"]
@@ -13,47 +11,11 @@ script = ExtResource("1_mjvo7")
 
 [node name="Niveaux1" parent="." instance=ExtResource("2_ykxpw")]
 
-[node name="TrapZone" parent="Niveaux1" instance=ExtResource("3_ilqfd")]
-position = Vector2(656, 263)
-
-[node name="TrapZone2" parent="Niveaux1" instance=ExtResource("3_ilqfd")]
-position = Vector2(1040, 643)
-
-[node name="Token6" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(891, 848)
-
-[node name="Token7" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(1041, 605)
-
-[node name="Token8" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(1205, 489)
-
-[node name="Token9" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(1479, 509)
-
-[node name="Token10" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(1484, 304)
-
-[node name="Token11" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(1189, 148)
-
-[node name="Token12" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(655, 215)
-
-[node name="Token13" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(520, 158)
-
-[node name="Token14" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(360, 53)
-
-[node name="Token15" parent="Niveaux1" instance=ExtResource("4_bd85g")]
-position = Vector2(1027, 100)
-
 [node name="flagFinNiveau2" parent="Niveaux1" instance=ExtResource("4_nmrhu")]
 position = Vector2(874, 98)
 
 [node name="Ennemis" parent="Niveaux1" instance=ExtResource("6_hdr5b")]
-position = Vector2(494, 38)
+position = Vector2(495, 56)
 
 [node name="PersoPrincipal" parent="." instance=ExtResource("7_2o3sw")]
 position = Vector2(176, -26)

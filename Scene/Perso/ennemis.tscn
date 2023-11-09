@@ -57,21 +57,21 @@ region = Rect2(96, 0, 48, 48)
 atlas = ExtResource("2_en6cx")
 region = Rect2(144, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_un17a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pabb"]
 atlas = ExtResource("3_dbut5")
-region = Rect2(0, 0, 48, 48)
+region = Rect2(0, 0, 43, 45)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_emxpw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_luofq"]
 atlas = ExtResource("3_dbut5")
-region = Rect2(48, 0, 48, 48)
+region = Rect2(43, 0, 43, 45)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_poxqv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7d0n"]
 atlas = ExtResource("3_dbut5")
-region = Rect2(96, 0, 48, 48)
+region = Rect2(86, 0, 43, 45)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rma4g"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_revmt"]
 atlas = ExtResource("3_dbut5")
-region = Rect2(144, 0, 48, 48)
+region = Rect2(129, 0, 43, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1melf"]
 atlas = ExtResource("4_uxj78")
@@ -124,7 +124,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cd0eh")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack",
 "speed": 5.0
 }, {
@@ -147,18 +147,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_un17a")
+"texture": SubResource("AtlasTexture_0pabb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emxpw")
+"texture": SubResource("AtlasTexture_luofq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_poxqv")
+"texture": SubResource("AtlasTexture_k7d0n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rma4g")
+"texture": SubResource("AtlasTexture_revmt")
 }],
-"loop": true,
+"loop": false,
 "name": &"JUMP",
 "speed": 5.0
 }, {
@@ -201,16 +201,22 @@ shape = SubResource("RectangleShape2D_w3wap")
 position = Vector2(3, -19)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-1.40625, 1.75)
+scale = Vector2(0.949128, 0.922222)
 sprite_frames = SubResource("SpriteFrames_2v37u")
-animation = &"JUMP"
-frame_progress = 0.319753
+animation = &"Attack"
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 2.0
+one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
 position = Vector2(9, 8)
 shape = SubResource("RectangleShape2D_xxcjm")
 
-[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
