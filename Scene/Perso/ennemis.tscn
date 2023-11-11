@@ -185,7 +185,7 @@ position = Vector2(-11, 6.5)
 shape = SubResource("RectangleShape2D_w3wap")
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(18, -21)
+position = Vector2(11, -22)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(-5.60036, 2)
@@ -208,6 +208,10 @@ shape = SubResource("RectangleShape2D_xxcjm")
 [node name="RayCast2D2" type="RayCast2D" parent="CharacterBody2D"]
 position = Vector2(-21, 6)
 target_position = Vector2(39, 0)
+
+[node name="RayCast2D3" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-25, -52)
+target_position = Vector2(42, 0)
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

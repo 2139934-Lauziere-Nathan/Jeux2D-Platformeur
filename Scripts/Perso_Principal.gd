@@ -94,3 +94,6 @@ func mort():
 func domage():
 	vie = vie-1
 	mort()
+func is_ciblePrincipal():
+	return $CollisionShape2D.position
+	

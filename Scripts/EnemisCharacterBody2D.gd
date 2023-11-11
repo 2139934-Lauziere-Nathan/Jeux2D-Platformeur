@@ -11,6 +11,7 @@ var state = WALK
 @onready var anim = $AnimatedSprite2D
 @onready var ray2D = $RayCast2D
 @onready var ray2D2 = $RayCast2D2
+@onready var ray2D3 = $RayCast2D3
 @onready var colisionBody = $CollisionShape2D
 @onready var colisionArea = $Area2D/CollisionShape2D
 
@@ -19,107 +20,113 @@ var state = WALK
 const SPEED = 60
 const JUMP_VELOCITY = -40.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var direction = 1
+var direction = null
 
-
+func  _ready():
+	direction = 1
 func _physics_process(delta):
 	#selectIdleOrWalk()
 	#if state == WALK && $Timer.is_stopped():
 		#selectDirection()
-	selecIdleOrWalkplusDirection()
+	detctTomberdansUnTrous()
+	select_rand_etas()
 	
-	etas()
+	etas2()
 	
 	
 	velocity.y += gravity * delta
 	move_and_slide()
+func selectdir():
 
-func selecIdleOrWalkplusDirection():
-	var randomNumber = ceil(randf_range(0, 2))
-	var randomNumberdir = ceil(randf_range(0, 2))
-	if state != ATTACK && $Timer.is_stopped():
-
-		
-
-		if randomNumber == 1:
+	if randi() % 2 == 0:
+		direction = 1
+	
+	elif randi() % 2 == 1:
+		direction = -1
+	print_debug(direction)
+	updateCharacterDirection()
+	
+func select_rand_etas():
+	if $Timer.is_stopped():
+		var rand = randi() % 2 == 0
+		if rand == true:
 			state = IDLE
 
-		elif randomNumber == 2:
-			
-
-			if randomNumberdir == 1 && $Timer.is_stopped():
-				direction = 1
-
-			elif randomNumberdir == 2 && $Timer.is_stopped():
-				direction = 2
-
+		elif rand == false:
+			selectdir()
 			state = WALK
+
 		$Timer.start()
-func etas():
+
+		
+func etas2():
 	match state:
 		IDLE:
+			handleIdleState()
 
-			anim.play("IDLE")
-			velocity.x = 0
-			if direction == 1:
-				if anim.scale.x != 1:
-					anim.scale.x = 1
-					colisionArea.position.x *= 1
-					colisionBody.position.x *= 1
-					ray2D2.position.x *= 1
-			elif direction == 2:
-				if anim.scale.x != -1:
-					anim.scale.x = -1 
-					colisionArea.position.x *= -1
-					colisionBody.position.x *= -1
-					ray2D.position.x *=-1
-					ray2D2.position.x *=-1
-				
-			
 		WALK:
+			handleWalkState()
 
-			anim.play("RUN")
-			detect_fall()
-			detectmur()
-			
-			if direction == 1:
-				velocity.x = SPEED
-				detect_fall()
-				if anim.scale.x != 1:
-					anim.scale.x = 1
-					colisionArea.position.x *= 1
-					colisionBody.position.x *= 1
-					
-					ray2D2.position.x *= 1
-			elif direction == 2:
-				velocity.x = -SPEED
-				if anim.scale.x != -1:
-					anim.scale.x = -1  # Flip animation if moving left
-					colisionArea.position.x *= -1
-					colisionBody.position.x *= -1
-					ray2D.position.x *=-1
-					
-					ray2D2.position.x *=-1
-				detectmur()
-				detect_fall()
-			
 		ATTACK:
 			anim.play("Attack")
+
 		JUMP:
-			anim.play("JUMP")
-			velocity.y = (1 * JUMP_VELOCITY )
-			if direction == 1:
-				velocity.x = SPEED
-			if  direction == 2:
-				velocity.x = -SPEED
-			
+			handleJumpState()
+
+func handleIdleState():
+	updateCharacterDirection()
+	anim.play("IDLE")
+	velocity.x = 0
+	
+
+func handleWalkState():
+	updateCharacterDirection()
+	anim.play("RUN")
+	detect_fall()
+	detectmur()
+	detectMurEtPasTrous()
+	print_debug(direction)
+	if direction == 1:
+		velocity.x = SPEED
+	elif  direction == -1:
+		velocity.x = -SPEED
+	
+
+	
+
+func handleJumpState():
+	if $Timer.is_stopped():
+		velocity.y = JUMP_VELOCITY
+		anim.play("JUMP")
+		detectMurEtPasTrous()
+		if direction == 1:
+			velocity.x = SPEED
+		elif direction == -1:
+			velocity.x = -SPEED
+		$Timer.start()
+
+func updateCharacterDirection():
+	anim.scale.x = direction
+	colisionArea.scale.x *= direction
+	colisionBody.scale.x *= direction
+	ray2D.scale.x *= direction
+	ray2D2.scale.x *= direction
+	ray2D3.scale.x *= direction
+
+func setCharacterDirection(scaleFactor):
+	anim.scale.x = scaleFactor
+	colisionArea.scale.x *= scaleFactor
+	colisionBody.scale.x *= scaleFactor
+	ray2D.scale.x *= scaleFactor
+	ray2D2.scale.x *= scaleFactor
+	ray2D3.scale.x *= scaleFactor
 			
 func detect_fall():
 	
 	if not ray2D.is_colliding():
-		print_debug("testarrettrous")
-		$Timer.start()
-		$Timer.wait_time = 1
+
+		
+		
 		state = JUMP
 		
 		#if direction == 1:
@@ -130,26 +137,42 @@ func detectmur():
 	if ray2D2.is_colliding():
 		state = IDLE
 		velocity.x = 0
-		print_debug("test detection de mur")
+
 		$Timer.start()
 		if direction == 1:
-			direction = 2
-		elif direction == 2:
+			direction = -1
+		elif direction == -1:
 			direction = 1
+		updateCharacterDirection()
 		move_and_slide()
-
+		return true
+	return false
+func detectMurEtPasTrous():
+	if ray2D2.is_colliding():
+		if not ray2D3.is_colliding():
+			state = JUMP
+			return true
+	return false
+func detctTomberdansUnTrous():
+	if ray2D.is_colliding():
+		if ray2D2.is_colliding():
+			state = JUMP
+			return true
+	return false
 func _on_area_2d_body_entered(body):
 	
 
 	if body.has_method("domage"):
 		state = ATTACK
 		body.domage()
-	else:
-		state = IDLE
+
 	pass # Replace with function body.
 
 
 func _on_animated_sprite_2d_animation_finished():
-	if state == ATTACK || WALK:
+	if state == ATTACK:
 		state = IDLE
 	pass # Replace with function body.
+	
+	
+
