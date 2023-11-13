@@ -185,7 +185,7 @@ position = Vector2(-11, 6.5)
 shape = SubResource("RectangleShape2D_w3wap")
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(11, -22)
+position = Vector2(20, -5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(-5.60036, 2)
@@ -212,6 +212,22 @@ target_position = Vector2(39, 0)
 [node name="RayCast2D3" type="RayCast2D" parent="CharacterBody2D"]
 position = Vector2(-25, -52)
 target_position = Vector2(42, 0)
+
+[node name="RayCast2D4" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-2, 1)
+target_position = Vector2(-35, 0)
+
+[node name="Vision" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-21, 1)
+target_position = Vector2(272, 0)
+
+[node name="DetectSol" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-11, -13)
+target_position = Vector2(0, 44)
+
+[node name="TimerAgression" type="Timer" parent="CharacterBody2D"]
+wait_time = 10.0
+one_shot = true
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
