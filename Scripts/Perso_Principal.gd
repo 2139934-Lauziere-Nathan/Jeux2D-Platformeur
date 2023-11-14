@@ -92,6 +92,8 @@ func mort():
 	if vie <= 0:
 		get_tree().change_scene_to_file("res://Scene/Menus/game_over_screen.tscn")
 func domage():
+	velocity.x = -(1 * -speed )
+	velocity.y = (1 * -jump_speed )
 	vie = vie-1
 	mort()
 func is_ciblePrincipal():

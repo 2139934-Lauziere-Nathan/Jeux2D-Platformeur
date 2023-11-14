@@ -167,13 +167,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a61vk")
 }],
-"loop": true,
+"loop": false,
 "name": &"RUN",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxcjm"]
-size = Vector2(11, 3)
+size = Vector2(7.5, 6.5)
 
 [node name="Ennemis" type="Node2D"]
 
@@ -181,19 +181,20 @@ size = Vector2(11, 3)
 script = ExtResource("1_6xm0g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-11, 6.5)
+position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_w3wap")
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(20, -5)
+position = Vector2(0, -24)
+target_position = Vector2(25, 49)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(-5.60036, 2)
+position = Vector2(6, -2)
 scale = Vector2(0.691682, 0.922222)
 sprite_frames = SubResource("SpriteFrames_2v37u")
-animation = &"Attack"
+animation = &"RUN"
 
-[node name="Timer" type="Timer" parent="CharacterBody2D"]
+[node name="TimerAttack" type="Timer" parent="CharacterBody2D"]
 wait_time = 2.0
 one_shot = true
 
@@ -202,31 +203,62 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-position = Vector2(5, 9)
+position = Vector2(13, 0)
+shape = SubResource("RectangleShape2D_xxcjm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-14, 0)
 shape = SubResource("RectangleShape2D_xxcjm")
 
 [node name="RayCast2D2" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(-21, 6)
-target_position = Vector2(39, 0)
+position = Vector2(0, 2)
+target_position = Vector2(25, 0)
 
 [node name="RayCast2D3" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(-25, -52)
-target_position = Vector2(42, 0)
+position = Vector2(0, -61)
+target_position = Vector2(30, 0)
 
 [node name="RayCast2D4" type="RayCast2D" parent="CharacterBody2D"]
 position = Vector2(-2, 1)
-target_position = Vector2(-35, 0)
+target_position = Vector2(-35, -1)
 
 [node name="Vision" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(-21, 1)
+position = Vector2(0, 2)
 target_position = Vector2(272, 0)
 
 [node name="DetectSol" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(-11, -13)
-target_position = Vector2(0, 44)
+position = Vector2(0, 4)
+target_position = Vector2(0, 21)
 
-[node name="TimerAgression" type="Timer" parent="CharacterBody2D"]
-wait_time = 10.0
+[node name="TimerSaut" type="Timer" parent="CharacterBody2D"]
+one_shot = true
+
+[node name="DetectStep" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(0, 15)
+target_position = Vector2(31, 1)
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+
+[node name="RayCast2D5" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(1, -57)
+target_position = Vector2(108, 80)
+
+[node name="RayCast2D6" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(0, -35)
+target_position = Vector2(40, 23)
+
+[node name="rayAttack1" type="RayCast2D" parent="CharacterBody2D"]
+target_position = Vector2(269, -43)
+
+[node name="rayAttack2" type="RayCast2D" parent="CharacterBody2D"]
+target_position = Vector2(261, -78)
+
+[node name="rayAttack3" type="RayCast2D" parent="CharacterBody2D"]
+target_position = Vector2(267, 44)
+
+[node name="Timermarche" type="Timer" parent="CharacterBody2D"]
+
+[node name="TimerIdle" type="Timer" parent="CharacterBody2D"]
 one_shot = true
 
 [connection signal="animation_finished" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D" method="_on_animated_sprite_2d_animation_finished"]
