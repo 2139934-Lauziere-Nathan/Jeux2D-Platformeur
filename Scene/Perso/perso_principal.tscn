@@ -171,7 +171,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x23i7"]
-size = Vector2(20, 33)
+size = Vector2(20, 30.5)
 
 [node name="PersoPrincipal" type="Node2D"]
 
@@ -185,7 +185,7 @@ animation = &"run"
 frame_progress = 0.950007
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-3, 1)
+position = Vector2(-3, 2.25)
 shape = SubResource("RectangleShape2D_x23i7")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
