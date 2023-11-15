@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://celhhl8e6als8"
-path="res://.godot/imported/Dash_item.png-5a79acc6919a49447ef53463cf6725a4.ctex"
+uid="uid://drfurxdtm4o3j"
+path="res://.godot/imported/central_Stairs.png-209783dde300ffbbbb9f6f91a6c88cd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Dash_item.png"
-dest_files=["res://.godot/imported/Dash_item.png-5a79acc6919a49447ef53463cf6725a4.ctex"]
+source_file="res://Assets/Sprite/Objet_Max/central_Stairs.png"
+dest_files=["res://.godot/imported/central_Stairs.png-209783dde300ffbbbb9f6f91a6c88cd3.ctex"]
 
 [params]
 

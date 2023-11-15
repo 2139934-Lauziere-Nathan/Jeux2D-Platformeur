@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdjkjpsg330ds"]
 
 [ext_resource type="Script" path="res://Scripts/dash_Item.gd" id="1_s87bj"]
-[ext_resource type="Texture2D" uid="uid://celhhl8e6als8" path="res://Assets/Sprite/Dash_item.png" id="2_ypid1"]
+[ext_resource type="Texture2D" uid="uid://celhhl8e6als8" path="res://Assets/Sprite/Objet_Max/Dash_item.png" id="2_ypid1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1y2r2"]
 size = Vector2(20, 12)

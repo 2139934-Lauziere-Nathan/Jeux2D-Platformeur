@@ -185,7 +185,7 @@ animation = &"run"
 frame_progress = 0.950007
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-3, 2.25)
+position = Vector2(-3, 3)
 shape = SubResource("RectangleShape2D_x23i7")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

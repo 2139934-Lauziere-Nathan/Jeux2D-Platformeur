@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfmot12doia1a"]
 
 [ext_resource type="Script" path="res://Scripts/Ladder.gd" id="1_2b3aw"]
-[ext_resource type="Texture2D" uid="uid://vlv3641scu0a" path="res://Assets/Sprite/ladder.png" id="2_4g20t"]
+[ext_resource type="Texture2D" uid="uid://vlv3641scu0a" path="res://Assets/Sprite/Objet_Max/ladder.png" id="2_5e4ja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg61g"]
 size = Vector2(32, 143)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgmlb"]
-texture = ExtResource("2_4g20t")
+texture = ExtResource("2_5e4ja")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_l13p6"]
@@ -17,6 +17,9 @@ sources/0 = SubResource("TileSetAtlasSource_tgmlb")
 script = ExtResource("1_2b3aw")
 
 [node name="Laddercoll" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+light_mask = 4
+visibility_layer = 4
 position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_rg61g")
 

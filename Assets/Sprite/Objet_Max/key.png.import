@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vlv3641scu0a"
-path="res://.godot/imported/ladder.png-c79cb15e397f31e03c51829019eadf77.ctex"
+uid="uid://ddgtu7ctsn75j"
+path="res://.godot/imported/key.png-47125541479d1864f58b71d6efb08155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/ladder.png"
-dest_files=["res://.godot/imported/ladder.png-c79cb15e397f31e03c51829019eadf77.ctex"]
+source_file="res://Assets/Sprite/Objet_Max/key.png"
+dest_files=["res://.godot/imported/key.png-47125541479d1864f58b71d6efb08155.ctex"]
 
 [params]
 

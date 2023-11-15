@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk3dqm0610wai"
-path="res://.godot/imported/tileset_modern_rpg_background.png-e73a34e7c7518037ef9d4984a964615e.ctex"
+uid="uid://bkski7cuqo2oi"
+path="res://.godot/imported/stairs.png-7d1df1f2368bf93adb84a6b835f19962.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/interieur/tileset_modern_rpg_background.png"
-dest_files=["res://.godot/imported/tileset_modern_rpg_background.png-e73a34e7c7518037ef9d4984a964615e.ctex"]
+source_file="res://Assets/Sprite/Objet_Max/stairs.png"
+dest_files=["res://.godot/imported/stairs.png-7d1df1f2368bf93adb84a6b835f19962.ctex"]
 
 [params]
 
