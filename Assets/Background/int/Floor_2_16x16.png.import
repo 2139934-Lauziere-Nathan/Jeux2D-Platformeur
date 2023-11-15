@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j2mb5prmi27s"
-path="res://.godot/imported/Floor_2_16x16.png-ddef5acf0cf7dc52a03bb5fb42a8b435.ctex"
+path="res://.godot/imported/Floor_2_16x16.png-5e4de2d2a1bd6e512bccdbf5e6542acd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilemap/Int Tile/Floor_2_16x16.png"
-dest_files=["res://.godot/imported/Floor_2_16x16.png-ddef5acf0cf7dc52a03bb5fb42a8b435.ctex"]
+source_file="res://Assets/Background/int/Floor_2_16x16.png"
+dest_files=["res://.godot/imported/Floor_2_16x16.png-5e4de2d2a1bd6e512bccdbf5e6542acd.ctex"]
 
 [params]
 
