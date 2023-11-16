@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Note_niveai_2.gd" id="1_ghlih"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="1_gi24e"]
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="2_mf2de"]
-[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/Perso_Principal.tscn" id="2_nji2w"]
+[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="2_nji2w"]
 [ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="4_7semi"]
 [ext_resource type="Texture2D" uid="uid://btc08v21xflko" path="res://Assets/Background/Lab/1038-0.png" id="4_v563v"]
 [ext_resource type="Texture2D" uid="uid://di6h3ixhbdvqv" path="res://Assets/Sprite/Tilemap/Lab Tiles/475.png" id="6_hl073"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bfmot12doia1a" path="res://Scene/Item/ladder.tscn" id="12_hwnmf"]
 [ext_resource type="PackedScene" uid="uid://215cm2qn1ly4" path="res://Scene/Item/item_heal.tscn" id="13_g3f2g"]
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="14_0t32r"]
-[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_Invisible.tscn" id="15_ur66n"]
+[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_invisible.tscn" id="15_ur66n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qkhok"]
 
