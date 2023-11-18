@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dfc7gvfdyypja"]
+[gd_scene load_steps=17 format=3 uid="uid://dfc7gvfdyypja"]
 
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="1_lcucc"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="2_eakjd"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cvd8uysqbqu0p" path="res://Scene/Level/plat_monte_auto.tscn" id="9_j4a8x"]
 [ext_resource type="PackedScene" uid="uid://dsh50q82pn3f2" path="res://Scene/Item/assenseur.tscn" id="10_n7lrp"]
 [ext_resource type="PackedScene" uid="uid://dy7atufe2b0ag" path="res://Scene/Item/stop_point_assenseur.tscn" id="11_ie1ss"]
+[ext_resource type="PackedScene" uid="uid://bl68edn1iwy0f" path="res://Scene/Item/sentry.tscn" id="12_jm63q"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l7q6d"]
 
@@ -2317,5 +2318,8 @@ position = Vector2(303, 43)
 
 [node name="stop_point_assenseur" parent="." instance=ExtResource("11_ie1ss")]
 position = Vector2(301, -8)
+
+[node name="Sentry" parent="." instance=ExtResource("12_jm63q")]
+position = Vector2(372, 54)
 
 [connection signal="stop" from="stop_point_assenseur" to="Assenseur" method="_on_stop_point_assenseur_stop"]
