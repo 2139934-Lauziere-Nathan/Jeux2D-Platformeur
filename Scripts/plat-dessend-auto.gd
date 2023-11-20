@@ -8,21 +8,19 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print_debug("timer : ",$Timer.time_left)
+
 	if $Timer.is_stopped():
-		print_debug("gravity",body.gravity)
+
 		body.gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 	pass
 
 
 func _on_area_2d_body_entered(body):
-	print_debug("body_entre")
+
 	if body.has_method("domage"):
-		print_debug("body_domage")
 	
-		print_debug("timer_fini")
 		
 		$Timer.one_shot = true
-		print_debug("timeroneshot",$Timer.one_shot)
+
 
 	pass # Replace with function body.

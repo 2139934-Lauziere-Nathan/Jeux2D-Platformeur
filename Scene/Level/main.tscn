@@ -1,19 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbyyp8drtl5hh"]
+[gd_scene load_steps=6 format=3 uid="uid://dbyyp8drtl5hh"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_mjvo7"]
 [ext_resource type="PackedScene" uid="uid://dfc7gvfdyypja" path="res://Scene/Level/niveaux_1.tscn" id="2_ykxpw"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="4_nmrhu"]
 [ext_resource type="PackedScene" uid="uid://csoruq7jj1y6y" path="res://Scene/Level/Niveau_2.tscn" id="6_57sys"]
-[ext_resource type="PackedScene" uid="uid://c1ot83imugdos" path="res://Scene/Perso/ennemis.tscn" id="6_hdr5b"]
 [ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="7_2o3sw"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_mjvo7")
 
 [node name="Niveaux1" parent="." instance=ExtResource("2_ykxpw")]
-
-[node name="Ennemis" parent="Niveaux1" instance=ExtResource("6_hdr5b")]
-position = Vector2(495, 56)
 
 [node name="PersoPrincipal" parent="." instance=ExtResource("7_2o3sw")]
 position = Vector2(176, -26)

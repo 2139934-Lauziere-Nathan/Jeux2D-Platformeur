@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const speed = 50
+const speed = 300
 var direction = Vector2()
-var passBody = false
+var passBody = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

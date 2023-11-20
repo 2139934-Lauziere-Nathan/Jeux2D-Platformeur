@@ -9,6 +9,7 @@
 scale = Vector2(0.005, 0.005)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_gw05e")
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]

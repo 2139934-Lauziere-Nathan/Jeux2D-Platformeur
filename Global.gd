@@ -23,7 +23,7 @@ func _plusUnToken():
 	token= token+1
 func death():
 	if etas == 0 && life <= 0:
-		print_debug("mortis")
+		
 		etas = 1
 		get_tree().change_scene_to_file("res://Scene/Menus/game_over_screen.tscn")
 		
@@ -45,6 +45,6 @@ func _process(delta):
 
 
 func _on_flag_fin_niveau_2_flagsignal(flag):
-	print_debug("testflag",niveau)
+	
 	niveau +1
 	pass # Replace with function body.
