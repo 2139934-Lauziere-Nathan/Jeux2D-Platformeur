@@ -47,7 +47,7 @@ func _physics_process(delta):
 	updateCharacterDirection()
 	if excpop == 0:
 		excl.hide()
-	print_debug("exc",excpop)
+
 	velocity.y += gravity * delta
 	move_and_slide()
 
@@ -75,7 +75,7 @@ func handleIdleState():
 	if TimerIdle.is_stopped():
 		if $TimerIdle.is_stopped():
 			if TriggerAggression() != true:
-				print_debug("changerdirestcall")
+
 				changerDir()
 				$TimerIdle.start()
 				selectMarcheAleatoire()
@@ -100,7 +100,7 @@ func handleJumpState():
 			state = IDLE
 	
 func updateCharacterDirection():
-	print_debug("direction : ",direction)
+
 	anim.scale.x = direction
 	ray2D.scale.x = direction
 	ray2D2.scale.x = direction
@@ -124,7 +124,7 @@ func detectSlope():
 func detectPersonneEnArriere():
 	if ray2D4.is_colliding():
 		if checkColHumain(ray2D4.get_collider())== true:
-			print_debug("coliderarrier")
+
 			$TimerIdle.start()
 			changerDir()
 
@@ -132,7 +132,7 @@ func SauteAvantDeTomber():
 	if Sol.is_colliding():
 		if ray2D5.is_colliding() or ray2D6.is_colliding() or  ray2D7.is_colliding():
 			if not ray2D.is_colliding():
-				print_debug("SauteAvantDeTomber")
+
 				$TimerSaut.stop()
 				state = JUMP
 
@@ -142,9 +142,9 @@ func TriggerIdle():
 			if state != ATTACK:
 				if is_on_floor():
 					
-					print_debug("time timeridle : ",$TimerIdle.time_left )
+
 					if $TimerIdle.time_left >= 0:
-						print_debug("testdebug ")
+
 						excpop = 0
 						state = IDLE
 

@@ -1,26 +1,20 @@
 extends Node2D
 
-var flag = false
-@onready var  anim = $Area2D/AnimatedSprite2D
-signal flagsignal(flag)
+var flag_ = false
+signal signalflag(flag)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	anim.play("idle")
-	if flag == true:
-		emit_signal("flagsignal", flag)
-		flag = false
+	
 	pass
 	
-
-	
-
-
-func _on_area_2d_body_entered(body):
-	if body.has_method("domage"):
-		flag = true
+func _on_flag_fin_niveau_flagsignal(flag):
+	flag_ = flag
+	emit_signal("signalflag", flag)
 	pass # Replace with function body.

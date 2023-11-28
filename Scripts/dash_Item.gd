@@ -13,6 +13,6 @@ func _process(_delta):
 
 
 func _on_body_entered(body):
-	body.unlock_dash()
+	#body.unlock_dash()
 	queue_free()
 	pass # Replace with function body.

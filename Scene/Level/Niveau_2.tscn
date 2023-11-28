@@ -1,7 +1,8 @@
-[gd_scene load_steps=48 format=3 uid="uid://csoruq7jj1y6y"]
+[gd_scene load_steps=50 format=3 uid="uid://csoruq7jj1y6y"]
 
 [ext_resource type="Texture2D" uid="uid://bj1268vp6b53m" path="res://Assets/Sprite/Tilemap/Lab Tiles/938.png" id="1_857di"]
 [ext_resource type="Script" path="res://Scripts/Note_niveai_2.gd" id="1_ghlih"]
+[ext_resource type="Script" path="res://Scene/Level/Niveau_2.gd" id="1_wvq2b"]
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="2_mf2de"]
 [ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="4_7semi"]
 [ext_resource type="Texture2D" uid="uid://btc08v21xflko" path="res://Assets/Background/Lab/1038-0.png" id="4_v563v"]
@@ -27,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://1x6lernifd6h" path="res://Assets/Sprite/Tilemap/Lab Items/783-0.png" id="18_fb24s"]
 [ext_resource type="Texture2D" uid="uid://dcxi08trsuew6" path="res://Assets/Sprite/Tilemap/Lab Items/931-0.png" id="20_hbmik"]
 [ext_resource type="Texture2D" uid="uid://bhaajn0nd7ohu" path="res://Assets/Sprite/Tilemap/Lab Items/1005-0.png" id="21_olj0n"]
+[ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="29_l3dot"]
 [ext_resource type="PackedScene" uid="uid://dmws0144cekmu" path="res://Scene/obstacle/porte_barre.tscn" id="30_eudm5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qkhok"]
@@ -3660,6 +3662,8 @@ light_mask = 2
 visibility_layer = 2
 z_index = -1
 z_as_relative = false
+position = Vector2(884, 962)
+script = ExtResource("1_wvq2b")
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("1_ghlih")
@@ -3701,7 +3705,7 @@ layer_0/tile_data = PackedInt32Array(-1638357, 131078, 0, -1638356, 196614, 0, -
 [node name="Back" type="ParallaxBackground" parent="TileMap"]
 
 [node name="Sprite2D" type="Sprite2D" parent="TileMap/Back"]
-position = Vector2(648, 278)
+position = Vector2(603, 436.892)
 scale = Vector2(4.05704, 5.36971)
 texture = ExtResource("11_1lgb1")
 
@@ -3735,7 +3739,11 @@ position = Vector2(779, -194)
 [node name="mur_Invisible" parent="." instance=ExtResource("15_ur66n")]
 position = Vector2(-379, -16)
 
+[node name="flagFinNiveau" parent="." instance=ExtResource("29_l3dot")]
+position = Vector2(1267, 0.108063)
+
 [node name="porte_Barre" parent="." instance=ExtResource("30_eudm5")]
 position = Vector2(648, -434)
 
 [connection signal="signalecle" from="clé" to="porte_Barre" method="_on_clé_signalecle"]
+[connection signal="flagsignal" from="flagFinNiveau" to="." method="_on_flag_fin_niveau_flagsignal"]

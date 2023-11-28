@@ -1,12 +1,13 @@
-[gd_scene load_steps=44 format=3 uid="uid://b47r0bex6qtai"]
+[gd_scene load_steps=46 format=3 uid="uid://b47r0bex6qtai"]
 
 [ext_resource type="Texture2D" uid="uid://c7tbr0b577tv6" path="res://Assets/Sprite/Tilemap/Tile city/Buildings.png" id="1_1dveh"]
+[ext_resource type="Script" path="res://Scripts/niveau_3.gd" id="1_fgabt"]
 [ext_resource type="PackedScene" uid="uid://215cm2qn1ly4" path="res://Scene/Item/item_heal.tscn" id="1_v8r6s"]
 [ext_resource type="Texture2D" uid="uid://cqqks1t13x7t5" path="res://Assets/Sprite/Tilemap/Tile city/Tiles.png" id="2_qk0oi"]
 [ext_resource type="Texture2D" uid="uid://cpli5vtwlp6wt" path="res://Assets/Sprite/Tilemap/Tile city/Props-01.png" id="3_y5bot"]
 [ext_resource type="Texture2D" uid="uid://bkski7cuqo2oi" path="res://Assets/Sprite/Objet_Max/stairs.png" id="4_064qv"]
 [ext_resource type="Texture2D" uid="uid://dfyqw2yqt2d56" path="res://Assets/Background/city/Base Color.png" id="4_spwcu"]
-[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/Perso_Principal.tscn" id="5_07k85"]
+[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="5_07k85"]
 [ext_resource type="Texture2D" uid="uid://dk3dqm0610wai" path="res://Assets/Background/int/tileset_modern_rpg_background.png" id="5_8wrmw"]
 [ext_resource type="Texture2D" uid="uid://brb70e5x5m2ui" path="res://Assets/Sprite/Objet_Max/Untitled 11-14-2023 10-40-32.png" id="5_qo5km"]
 [ext_resource type="PackedScene" uid="uid://bdjkjpsg330ds" path="res://Scene/Item/dash_Item.tscn" id="6_33luv"]
@@ -23,9 +24,10 @@
 [ext_resource type="PackedScene" uid="uid://7u4v7xxthwt3" path="res://Scene/Item/cle_2.tscn" id="21_6vosl"]
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="22_2nxp8"]
 [ext_resource type="PackedScene" uid="uid://dfu58fwaq7j2c" path="res://Assets/Sprite/Objet_Max/porte_barre_2.tscn" id="23_2ulpu"]
-[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_Invisible.tscn" id="24_hpheh"]
+[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_invisible.tscn" id="24_hpheh"]
 [ext_resource type="PackedScene" uid="uid://c1ot83imugdos" path="res://Scene/Perso/ennemis.tscn" id="25_2xg4y"]
 [ext_resource type="PackedScene" uid="uid://bl68edn1iwy0f" path="res://Scene/Item/sentry.tscn" id="26_jlddp"]
+[ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="28_d2eep"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tmvwg"]
 
@@ -5025,6 +5027,9 @@ sources/2 = SubResource("TileSetAtlasSource_140ga")
 sources/3 = SubResource("TileSetAtlasSource_7jna4")
 
 [node name="Niveau_3" type="Node2D"]
+z_index = -1
+position = Vector2(1082, 682)
+script = ExtResource("1_fgabt")
 
 [node name="ItemHeal" parent="." instance=ExtResource("1_v8r6s")]
 position = Vector2(2237, 578)
@@ -5107,37 +5112,34 @@ rotation = 1.5708
 [node name="porte_Barre_2" parent="." instance=ExtResource("23_2ulpu")]
 position = Vector2(2370, 567)
 
-[node name="Token" type="Node" parent="."]
-
-[node name="Token4" parent="Token" instance=ExtResource("22_2nxp8")]
-position = Vector2(1517, 542)
-
-[node name="Token8" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token8" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(1414, 491)
 
-[node name="Token7" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token7" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(1419, 537)
 
-[node name="Token6" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token6" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(1469, 536)
 
-[node name="Token5" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token5" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(1471, 492)
 
-[node name="Token9" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token9" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(404, -82)
 
-[node name="Token2" parent="Token" instance=ExtResource("22_2nxp8")]
-position = Vector2(1569, 541)
-
-[node name="Token3" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token3" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(1526, 493)
 
-[node name="TrapZone2" parent="Token" instance=ExtResource("20_k6agg")]
+[node name="TrapZone2" parent="." instance=ExtResource("20_k6agg")]
 position = Vector2(1446, 594)
 
-[node name="Token" parent="Token" instance=ExtResource("22_2nxp8")]
+[node name="Token10" parent="." instance=ExtResource("22_2nxp8")]
 position = Vector2(1568, 491)
+
+[node name="Token2" parent="." instance=ExtResource("22_2nxp8")]
+position = Vector2(1569, 541)
+
+[node name="Token" type="Node" parent="."]
 
 [node name="Node2D" parent="." instance=ExtResource("24_hpheh")]
 position = Vector2(-75, -68)
@@ -5158,5 +5160,12 @@ position = Vector2(1999, -59)
 position = Vector2(1370, 444)
 rotation = 3.14159
 
+[node name="flagFinNiveau" parent="." instance=ExtResource("28_d2eep")]
+position = Vector2(2457, 564)
+
+[node name="Token4" parent="." instance=ExtResource("22_2nxp8")]
+position = Vector2(1517, 542)
+
 [connection signal="signalecle" from="cle" to="porte_Barre" method="_on_cle_signalecle"]
 [connection signal="signalecle2" from="cle_2" to="porte_Barre_2" method="_on_cle_2_signalecle_2"]
+[connection signal="flagsignal" from="flagFinNiveau" to="." method="_on_flag_fin_niveau_flagsignal"]
