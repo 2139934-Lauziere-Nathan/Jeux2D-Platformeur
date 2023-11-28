@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmws0144cekmu"]
+[gd_scene load_steps=10 format=3 uid="uid://dmws0144cekmu"]
 
 [ext_resource type="Texture2D" uid="uid://30mjk0pnoavy" path="res://Assets/Sprite/Objet_Max/porte.png" id="1_3af4j"]
+[ext_resource type="Script" path="res://Scene/obstacle/porte_barre.gd" id="1_18oi3"]
 [ext_resource type="Script" path="res://Scripts/porte.gd" id="1_b2csq"]
 [ext_resource type="Texture2D" uid="uid://doa312kq6rfv8" path="res://Assets/Sprite/Tilemap/Lab Items/489-0.png" id="2_6qd3t"]
 
@@ -35,6 +36,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_nbv5v")
 sources/0 = SubResource("TileSetAtlasSource_kistl")
 
 [node name="porte_Barre" type="Node2D"]
+script = ExtResource("1_18oi3")
 metadata/_edit_horizontal_guides_ = []
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

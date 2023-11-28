@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bj1268vp6b53m" path="res://Assets/Sprite/Tilemap/Lab Tiles/938.png" id="1_857di"]
 [ext_resource type="Script" path="res://Scripts/Note_niveai_2.gd" id="1_ghlih"]
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="2_mf2de"]
-[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/Perso_Principal.tscn" id="2_nji2w"]
+[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="2_nji2w"]
 [ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="4_7semi"]
 [ext_resource type="Texture2D" uid="uid://btc08v21xflko" path="res://Assets/Background/Lab/1038-0.png" id="4_v563v"]
 [ext_resource type="Texture2D" uid="uid://di6h3ixhbdvqv" path="res://Assets/Sprite/Tilemap/Lab Tiles/475.png" id="6_hl073"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="14_0t32r"]
 [ext_resource type="Texture2D" uid="uid://cp2i7w14g1dei" path="res://Assets/Sprite/Tilemap/Lab Items/555-0.png" id="14_pb2hw"]
 [ext_resource type="Texture2D" uid="uid://dkcfyu8uwqlu5" path="res://Assets/Sprite/Tilemap/Lab Items/859-1.png" id="15_dwa71"]
-[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_Invisible.tscn" id="15_ur66n"]
+[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_invisible.tscn" id="15_ur66n"]
 [ext_resource type="Texture2D" uid="uid://ci8wqbrch70ni" path="res://Assets/Sprite/Tilemap/Lab Items/873-0.png" id="16_71nj4"]
 [ext_resource type="Texture2D" uid="uid://c3slhjyqpv8kv" path="res://Assets/Sprite/Tilemap/Lab Items/915-2.png" id="17_f6o3i"]
 [ext_resource type="Texture2D" uid="uid://1x6lernifd6h" path="res://Assets/Sprite/Tilemap/Lab Items/783-0.png" id="18_fb24s"]
@@ -3702,6 +3702,7 @@ scale = Vector2(4.05704, 5.36971)
 texture = ExtResource("11_1lgb1")
 
 [node name="PersoPrincipal" parent="." instance=ExtResource("2_nji2w")]
+top_level = true
 
 [node name="clé" parent="." instance=ExtResource("11_vphp7")]
 position = Vector2(1039, -310)
@@ -3735,3 +3736,5 @@ position = Vector2(-379, -16)
 
 [node name="porte_Barre" parent="." instance=ExtResource("30_eudm5")]
 position = Vector2(648, -434)
+
+[connection signal="signalecle" from="clé" to="porte_Barre" method="_on_clé_signalecle"]
