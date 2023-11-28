@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 
 
-func _on_clé_signalecle(barre2):
+func _on_cle_2_signalecle_2(barre2):
 	if barre2 == false:
 		queue_free()
 	pass # Replace with function body.
