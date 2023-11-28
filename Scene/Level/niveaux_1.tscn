@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://dfc7gvfdyypja"]
+[gd_scene load_steps=18 format=3 uid="uid://dfc7gvfdyypja"]
 
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="1_lcucc"]
+[ext_resource type="Script" path="res://Scripts/niveaux_1.gd" id="1_m1jnd"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="2_eakjd"]
 [ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="2_sxt0m"]
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="4_fh5s8"]
@@ -2263,6 +2264,9 @@ sources/0 = SubResource("TileSetAtlasSource_btj8p")
 sources/1 = SubResource("TileSetAtlasSource_uoar0")
 
 [node name="Niveaux1" type="Node2D"]
+light_mask = 2
+visibility_layer = 2
+script = ExtResource("1_m1jnd")
 metadata/_edit_horizontal_guides_ = [-65.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -2323,4 +2327,7 @@ rotation = -0.000214696
 [node name="Ennemis" parent="." instance=ExtResource("13_i8t4h")]
 position = Vector2(951, 87)
 
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="flagsignal" from="flagFinNiveau" to="." method="_on_flag_fin_niveau_flagsignal"]
 [connection signal="stop" from="stop_point_assenseur" to="Assenseur" method="_on_stop_point_assenseur_stop"]

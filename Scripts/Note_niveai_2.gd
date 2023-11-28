@@ -15,4 +15,3 @@ extends Node
 #Plusieurs bonus sont déja dans le niveau telle que des coeurs(2), des pièces(2) et une clé servant pour l'instant de 
 #token
 
- 

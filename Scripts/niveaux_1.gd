@@ -4,3 +4,9 @@
 #la camera suis le joueur	
 #il y a un goal flag(non fonctionnel) a la fin du niveau qui indique a la variable global pour le niveau de faire +1
 #il y a 5 piece au travert le niveau
+
+
+func _on_flag_fin_niveau_flagsignal(flag):
+	if flag == true:
+		
+	pass # Replace with function body.

@@ -50,15 +50,21 @@ func _process(delta):
 
 func _on_flag_fin_niveau_2_flagsignal(flag):
 	
-	niveau +1
-	var lv = get_child(3)
-	
-	remove_child(lv)
+	niveau +=1
+	var lv = get_child(2)
+	print_debug(lv.is_processing())
+	lv.queue_free()
 
 
-
-	var newlv = load("res://Scene/Level/Niveau_2.tscn")
-	var reslv = newlv.instantiate()
-	add_child(reslv)
-	
+	print_debug(niveau)
+	if niveau == 2:
+		var newlv = load("res://Scene/Level/Niveau_2.tscn")
+		var reslv = newlv.instantiate()
+		add_child(reslv)
+	elif  niveau == 3:
+		var newlv3 = load("res://Scene/Level/niveau_3.tscn")
+		var reslv3 = newlv3.instantiate()
+		add_child(reslv3)
+	elif  niveau == 4:
+		get_tree().change_scene_to_file("res://Scene/Menus/MenuPrincipal.tscn")
 	pass # Replace with function body.
