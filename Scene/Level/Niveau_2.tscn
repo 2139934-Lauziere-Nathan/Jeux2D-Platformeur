@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="14_0t32r"]
 [ext_resource type="Texture2D" uid="uid://cp2i7w14g1dei" path="res://Assets/Sprite/Tilemap/Lab Items/555-0.png" id="14_pb2hw"]
 [ext_resource type="Texture2D" uid="uid://dkcfyu8uwqlu5" path="res://Assets/Sprite/Tilemap/Lab Items/859-1.png" id="15_dwa71"]
-[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_invisible.tscn" id="15_ur66n"]
+[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_Invisible.tscn" id="15_ur66n"]
 [ext_resource type="Texture2D" uid="uid://ci8wqbrch70ni" path="res://Assets/Sprite/Tilemap/Lab Items/873-0.png" id="16_71nj4"]
 [ext_resource type="Texture2D" uid="uid://c3slhjyqpv8kv" path="res://Assets/Sprite/Tilemap/Lab Items/915-2.png" id="17_f6o3i"]
 [ext_resource type="Texture2D" uid="uid://1x6lernifd6h" path="res://Assets/Sprite/Tilemap/Lab Items/783-0.png" id="18_fb24s"]
