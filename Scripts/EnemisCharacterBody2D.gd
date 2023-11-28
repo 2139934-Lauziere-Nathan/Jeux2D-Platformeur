@@ -200,3 +200,11 @@ func _on_animated_sprite_2d_animation_finished():
 	
 	
 
+
+
+func _on_detectbodyenbas_body_entered(body):
+	if body.has_method("domage"):
+		$TimerSaut.stop()
+		state = JUMP
+		
+	pass # Replace with function body.

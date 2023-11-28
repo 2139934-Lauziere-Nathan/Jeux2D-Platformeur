@@ -1,24 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbyyp8drtl5hh"]
+[gd_scene load_steps=4 format=3 uid="uid://dbyyp8drtl5hh"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_mjvo7"]
-[ext_resource type="PackedScene" uid="uid://dfc7gvfdyypja" path="res://Scene/Level/niveaux_1.tscn" id="2_ykxpw"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="4_nmrhu"]
-[ext_resource type="PackedScene" uid="uid://csoruq7jj1y6y" path="res://Scene/Level/Niveau_2.tscn" id="6_57sys"]
 [ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/perso_principal.tscn" id="7_2o3sw"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_mjvo7")
 
-[node name="Niveaux1" parent="." instance=ExtResource("2_ykxpw")]
-
 [node name="PersoPrincipal" parent="." instance=ExtResource("7_2o3sw")]
 position = Vector2(176, -26)
 
-[node name="Niveau_2" parent="." instance=ExtResource("6_57sys")]
-position = Vector2(0, -4000)
-skew = -1.56905
-
 [node name="flagFinNiveau2" parent="." instance=ExtResource("4_nmrhu")]
-position = Vector2(874, 98)
+position = Vector2(286, -75)
 
 [connection signal="flagsignal" from="flagFinNiveau2" to="." method="_on_flag_fin_niveau_2_flagsignal"]

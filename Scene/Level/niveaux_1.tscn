@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dfc7gvfdyypja"]
+[gd_scene load_steps=17 format=3 uid="uid://dfc7gvfdyypja"]
 
 [ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="1_lcucc"]
 [ext_resource type="Texture2D" uid="uid://bombp0u8i5g80" path="res://Assets/Background/wp8077675.jpg" id="2_eakjd"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="6_5wbs1"]
 [ext_resource type="PackedScene" uid="uid://215cm2qn1ly4" path="res://Scene/Item/item_heal.tscn" id="7_vvl87"]
 [ext_resource type="PackedScene" uid="uid://bicw121kefupp" path="res://Scene/Item/plat_dessend_auto.tscn" id="8_y0ewp"]
-[ext_resource type="PackedScene" uid="uid://cvd8uysqbqu0p" path="res://Scene/Level/plat_monte_auto.tscn" id="9_j4a8x"]
 [ext_resource type="PackedScene" uid="uid://dsh50q82pn3f2" path="res://Scene/Item/assenseur.tscn" id="10_n7lrp"]
 [ext_resource type="PackedScene" uid="uid://dy7atufe2b0ag" path="res://Scene/Item/stop_point_assenseur.tscn" id="11_ie1ss"]
 [ext_resource type="PackedScene" uid="uid://bl68edn1iwy0f" path="res://Scene/Item/sentry.tscn" id="12_jm63q"]
@@ -2310,9 +2309,6 @@ position = Vector2(590, 29)
 
 [node name="plat-dessend-auto" parent="." instance=ExtResource("8_y0ewp")]
 position = Vector2(208, 60)
-
-[node name="plat-monte-auto" parent="." instance=ExtResource("9_j4a8x")]
-position = Vector2(146, 65)
 
 [node name="Assenseur" parent="." instance=ExtResource("10_n7lrp")]
 position = Vector2(303, 43)

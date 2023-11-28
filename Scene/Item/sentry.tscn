@@ -1,24 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://bl68edn1iwy0f"]
+[gd_scene load_steps=11 format=3 uid="uid://bl68edn1iwy0f"]
 
 [ext_resource type="Script" path="res://Scripts/Sentry.gd" id="1_kig1d"]
-[ext_resource type="Texture2D" uid="uid://cccweafemee7p" path="res://Assets/Sprite/Sprite/spriteEnemis/sentry/sentry-unactive.png" id="2_p0h4k"]
+[ext_resource type="Texture2D" uid="uid://2qaxumillpah" path="res://Assets/Sprite/Sprite/spriteEnemis/sentry/sentryoff.png" id="2_prc20"]
 [ext_resource type="Texture2D" uid="uid://bc4gltch42g8q" path="res://Assets/Sprite/Sprite/spriteEnemis/sentry/SentryCrab-Sheet.png" id="3_hbshd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_46mb8"]
-atlas = ExtResource("2_p0h4k")
-region = Rect2(0, 0, 129, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8oweh"]
-atlas = ExtResource("2_p0h4k")
-region = Rect2(129, 0, 129, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_71m1c"]
-atlas = ExtResource("2_p0h4k")
-region = Rect2(258, 0, 129, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u1ws3"]
-atlas = ExtResource("2_p0h4k")
-region = Rect2(387, 0, 129, 75)
+[sub_resource type="AtlasTexture" id="AtlasTexture_55msf"]
+atlas = ExtResource("2_prc20")
+region = Rect2(0, 0, 87, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3eqol"]
 atlas = ExtResource("3_hbshd")
@@ -40,16 +28,7 @@ region = Rect2(384, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_46mb8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8oweh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_71m1c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u1ws3")
+"texture": SubResource("AtlasTexture_55msf")
 }],
 "loop": true,
 "name": &"default",
@@ -77,12 +56,12 @@ animations = [{
 size = Vector2(72, 51)
 
 [node name="Sentry" type="Node2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_kig1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_73nai")
-animation = &"new_animation"
-frame_progress = 0.976341
+frame_progress = 0.586338
 
 [node name="Marker2D" type="Marker2D" parent="AnimatedSprite2D"]
 position = Vector2(0, -24)
@@ -95,7 +74,7 @@ shape = SubResource("RectangleShape2D_ijqcj")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, 8)
-target_position = Vector2(0, -165)
+target_position = Vector2(0, -3000)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

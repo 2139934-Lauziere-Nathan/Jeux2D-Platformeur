@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed = 300.0
 var jump_speed = 400.0
-var life = Global.life
+
 var vie = 3
 var token = 0
 var is_jumping = false

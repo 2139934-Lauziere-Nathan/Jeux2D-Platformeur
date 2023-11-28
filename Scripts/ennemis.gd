@@ -15,6 +15,7 @@ extends Node2D
 @onready var colisionBody = $CollisionShape2D
 @onready var colisionArea = $Area2D/CollisionShape2D
 @onready var colisionArea2 = $Area2D/CollisionShape2D2
+@onready var colisionPerso = $CharacterBody2D/detectbodyenbas/CollisionShape2D
 var direction = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,3 +40,8 @@ func updateCharacterDirection():
 	rayAttack1.scale *= direction
 	rayAttack2.scale *= direction
 	rayAttack3.scale *= direction
+
+
+func _on_detectbodyenbas_body_entered(body):
+	
+	pass # Replace with function body.

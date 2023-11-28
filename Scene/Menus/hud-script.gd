@@ -4,7 +4,7 @@ extends Node2D
 
 var _vie
 var tok
-
+var fuckall
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,7 +12,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	lable_vie.text = str("vie = ",fuckall)
+	lable_token.text = str("token = ",fuckall)
 	lable_vie.text = str("vie = ",_vie)
 	lable_token.text = str("token = ",tok)
 	#lable_vie.text = str("life = ",Global.life)

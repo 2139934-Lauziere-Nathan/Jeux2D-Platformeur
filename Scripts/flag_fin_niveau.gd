@@ -15,6 +15,9 @@ func _process(delta):
 		emit_signal("flagsignal", flag)
 		flag = false
 	pass
+	
+
+	
 
 
 func _on_area_2d_body_entered(body):

@@ -12,6 +12,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	Global._plusUnToken()
+	
 	queue_free()
 	pass # Replace with function body.

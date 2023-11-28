@@ -13,12 +13,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	if raycast.is_colliding():
-		
+	if raycast.is_colliding() && raycast.collide_with_bodies:
+		anim.play("new_animation")
 		if $Timer4Timer.is_stopped():
 			actif = true
 
-			anim.play("new_animation")
+			
 		
 		if $Timer.is_stopped() && actif == true:
 			$Timer.start()
@@ -33,3 +33,7 @@ func _process(delta):
 		actif = false
 		anim.play("default")
 	pass
+func checkColHumain(collider):
+	if collider and collider is CharacterBody2D:
+		return true
+	return false

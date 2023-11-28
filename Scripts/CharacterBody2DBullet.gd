@@ -15,8 +15,8 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	if body.has_method("dammage") && passBody == true:
-		body.dammage()
+	if body.has_method("domage") && passBody == true:
+		body.domage()
 		queue_free()
 	if passBody == false:
 		passBody = true

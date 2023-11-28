@@ -7,9 +7,13 @@ var niveau = 1
 #zero menu , 1  - niveau 1 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	_start()
+	pass
 	# Load the level scene
-
+func _start():
+	var newlv = load("res://Scene/Level/niveaux_1.tscn")
+	var reslv = newlv.instantiate()
+	add_child(reslv)
 	
 	pass # Replace with function body.
 func _moinUneVie():
@@ -47,4 +51,14 @@ func _process(delta):
 func _on_flag_fin_niveau_2_flagsignal(flag):
 	
 	niveau +1
+	var lv = get_child(3)
+	
+	remove_child(lv)
+
+
+
+	var newlv = load("res://Scene/Level/Niveau_2.tscn")
+	var reslv = newlv.instantiate()
+	add_child(reslv)
+	
 	pass # Replace with function body.

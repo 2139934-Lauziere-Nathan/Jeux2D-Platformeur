@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c1ot83imugdos"]
+[gd_scene load_steps=32 format=3 uid="uid://c1ot83imugdos"]
 
 [ext_resource type="Script" path="res://Scripts/EnemisCharacterBody2D.gd" id="1_6xm0g"]
 [ext_resource type="Script" path="res://Scripts/ennemis.gd" id="1_thr12"]
@@ -177,6 +177,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxcjm"]
 size = Vector2(7.5, 6.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mlky"]
+size = Vector2(20, 4)
+
 [node name="Ennemis" type="Node2D"]
 script = ExtResource("1_thr12")
 
@@ -286,5 +289,12 @@ texture = ExtResource("7_7r1rh")
 [node name="TimerExclamation" type="Timer" parent="CharacterBody2D"]
 one_shot = true
 
+[node name="detectbodyenbas" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/detectbodyenbas"]
+position = Vector2(1, 22)
+shape = SubResource("RectangleShape2D_0mlky")
+
 [connection signal="animation_finished" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/detectbodyenbas" to="CharacterBody2D" method="_on_detectbodyenbas_body_entered"]
