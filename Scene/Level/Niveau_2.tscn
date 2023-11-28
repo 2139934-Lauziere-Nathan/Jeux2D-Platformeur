@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://csoruq7jj1y6y"]
+[gd_scene load_steps=50 format=3 uid="uid://csoruq7jj1y6y"]
 
 [ext_resource type="Texture2D" uid="uid://bj1268vp6b53m" path="res://Assets/Sprite/Tilemap/Lab Tiles/938.png" id="1_857di"]
 [ext_resource type="Script" path="res://Scripts/Note_niveai_2.gd" id="1_ghlih"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dcxi08trsuew6" path="res://Assets/Sprite/Tilemap/Lab Items/931-0.png" id="20_hbmik"]
 [ext_resource type="Texture2D" uid="uid://bhaajn0nd7ohu" path="res://Assets/Sprite/Tilemap/Lab Items/1005-0.png" id="21_olj0n"]
 [ext_resource type="PackedScene" uid="uid://dmws0144cekmu" path="res://Scene/obstacle/porte_barre.tscn" id="30_eudm5"]
+[ext_resource type="PackedScene" uid="uid://dyfq0uth6uhjb" path="res://Scene/Item/trap_zone.tscn" id="30_f7ans"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qkhok"]
 
@@ -3735,3 +3736,5 @@ position = Vector2(-379, -16)
 
 [node name="porte_Barre" parent="." instance=ExtResource("30_eudm5")]
 position = Vector2(648, -434)
+
+[node name="TrapZone" parent="." instance=ExtResource("30_f7ans")]
