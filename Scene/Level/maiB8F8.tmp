@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbyyp8drtl5hh"]
+[gd_scene load_steps=5 format=3 uid="uid://dbyyp8drtl5hh"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_mjvo7"]
+[ext_resource type="PackedScene" uid="uid://dfc7gvfdyypja" path="res://Scene/Level/niveaux_1.tscn" id="4_43pf1"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="4_nmrhu"]
 [ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/Perso_Principal.tscn" id="7_2o3sw"]
 
@@ -9,6 +10,8 @@ script = ExtResource("1_mjvo7")
 
 [node name="PersoPrincipal" parent="." instance=ExtResource("7_2o3sw")]
 position = Vector2(176, -26)
+
+[node name="Niveaux1" parent="." instance=ExtResource("4_43pf1")]
 
 [node name="flagFinNiveau" parent="." instance=ExtResource("4_nmrhu")]
 position = Vector2(108, 96)
