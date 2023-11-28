@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://u10s6j3esueb"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterBody2DBullet.gd" id="1_gw05e"]
+[ext_resource type="Texture2D" uid="uid://bccea2up8u0aq" path="res://Assets/Sprite/Sprite/spriteEnemis/Medium_Shell.png" id="2_c2wcv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7yrak"]
+
+[node name="Missile" type="Node2D"]
+scale = Vector2(0.005, 0.005)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_gw05e")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+shape = SubResource("CapsuleShape2D_7yrak")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_c2wcv")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

@@ -1,8 +1,9 @@
 extends Area2D
 var niveaux
+var flag = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite2D.play("idle")
+	
 	pass # Replace with function body.
 
 
@@ -13,7 +14,4 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-
-	Global.niveau = Global.niveau+1
-	#get_tree().change_scene_to_file("res://Scene/Level/niveaux_%s.tscn"%(niveaux+1))
-	pass # Replace with function body.
+	pass

@@ -9,6 +9,7 @@ enum {
 var TimerIdle : Timer
 var state = IDLE
 @onready var anim = $AnimatedSprite2D
+@onready var excl = $SpriteExclam
 @onready var ray2D = $RayCast2D
 @onready var ray2D2 = $RayCast2D2
 @onready var ray2D3 = $RayCast2D3
@@ -27,7 +28,7 @@ var state = IDLE
 @onready var colisionArea = $Area2D/CollisionShape2D
 @onready var colisionArea2 = $Area2D/CollisionShape2D2
 
-
+var excpop = 0
 var jump_timer = 0.0
 var max_jump_time = 1.0  # Adjust this value to control the maximum air time for the jump
 
@@ -38,11 +39,15 @@ var direction = 1
 
 func  _ready():
 	direction =-1
+	excl.hide()
 	
 func _physics_process(delta):
 	TriggerIdle()
 	etas2()
 	updateCharacterDirection()
+	if excpop == 0:
+		excl.hide()
+	print_debug("exc",excpop)
 	velocity.y += gravity * delta
 	move_and_slide()
 
@@ -136,10 +141,11 @@ func TriggerIdle():
 		if state != JUMP:
 			if state != ATTACK:
 				if is_on_floor():
+					
 					print_debug("time timeridle : ",$TimerIdle.time_left )
-					if $TimerIdle.is_processing():
+					if $TimerIdle.time_left >= 0:
 						print_debug("testdebug ")
-						
+						excpop = 0
 						state = IDLE
 
 func TriggerAggression():
@@ -149,10 +155,19 @@ func TriggerAggression():
 		var collider3 = rayAttack3.get_collider()
 		var  collider4 = Vue.get_collider()
 		if checkColHumain(collider) == true ||checkColHumain(collider2) == true || checkColHumain(collider3) == true || checkColHumain(collider4) == true:
-
 			if state != JUMP:
+
+				if $TimerExclamation.is_stopped():
+					$TimerExclamation.start()
+					excpop = 1
+				
+				if excpop == 1:
+					excl.show()
 				state = WALK
+		
 				return true
+
+		
 
 func checkColHumain(collider):
 	if collider and collider is CharacterBody2D:
@@ -185,3 +200,11 @@ func _on_animated_sprite_2d_animation_finished():
 	
 	
 
+
+
+func _on_detectbodyenbas_body_entered(body):
+	if body.has_method("domage"):
+		$TimerSaut.stop()
+		state = JUMP
+		
+	pass # Replace with function body.
