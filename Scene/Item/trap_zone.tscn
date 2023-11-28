@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du2sa0crhqb55" path="res://Assets/Sprite/Objet_Max/trapzone.png" id="2_tx4xu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guh4x"]
+size = Vector2(39, 34)
 
 [node name="TrapZone" type="Node2D"]
 
@@ -17,8 +18,8 @@ shape = SubResource("RectangleShape2D_guh4x")
 one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(9.53674e-07, 0)
-scale = Vector2(0.078125, 0.078125)
+position = Vector2(-0.500003, 0.5)
+scale = Vector2(0.152344, 0.128906)
 texture = ExtResource("2_tx4xu")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
