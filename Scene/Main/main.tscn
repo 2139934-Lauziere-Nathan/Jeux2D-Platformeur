@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbyyp8drtl5hh"]
+
+[ext_resource type="Script" path="res://Scripts/Global.gd" id="1_ooqjg"]
+[ext_resource type="PackedScene" uid="uid://br82c1mje4cnh" path="res://Scene/Perso/Perso_Principal.tscn" id="2_ooqga"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_ooqjg")
+
+[node name="PersoPrincipal" parent="." instance=ExtResource("2_ooqga")]
+position = Vector2(176, -26)

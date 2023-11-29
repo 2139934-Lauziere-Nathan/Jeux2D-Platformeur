@@ -12,7 +12,7 @@ var state = IDLE
 @onready var excl = $SpriteExclam
 @onready var ray2D = $RayCast2D
 @onready var ray2D2 = $RayCast2D2
-@onready var ray2D3 = $RayCast2D3
+
 @onready var ray2D4 = $RayCast2D4
 @onready var ray2D5 = $RayCast2D5
 @onready var ray2D6 = $RayCast2D6
@@ -104,7 +104,7 @@ func updateCharacterDirection():
 	anim.scale.x = direction
 	ray2D.scale.x = direction
 	ray2D2.scale.x = direction
-	ray2D3.scale.x = direction
+
 	ray2D4.scale.x = direction
 	ray2D5.scale.x = direction
 	ray2D6.scale.x = direction

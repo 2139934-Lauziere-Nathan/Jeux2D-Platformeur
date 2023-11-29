@@ -74,7 +74,7 @@ shape = SubResource("RectangleShape2D_ijqcj")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, 8)
-target_position = Vector2(0, -300)
+target_position = Vector2(0, -700)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

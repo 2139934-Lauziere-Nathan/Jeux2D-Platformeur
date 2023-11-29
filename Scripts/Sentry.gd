@@ -13,7 +13,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	if raycast.is_colliding() && raycast.collide_with_bodies:
+	if raycast.is_colliding() && checkColHumain(raycast.get_collider()):
 		anim.play("new_animation")
 		if $Timer4Timer.is_stopped():
 			actif = true

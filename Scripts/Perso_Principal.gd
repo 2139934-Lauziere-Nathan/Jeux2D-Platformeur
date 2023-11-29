@@ -3,8 +3,8 @@ extends CharacterBody2D
 var speed = 300.0
 var jump_speed = 400.0
 
-var vie = 3
-var token = 0
+var vie 
+var token 
 var is_jumping = false
 var double_saut = 0
 var dash = 1
@@ -17,7 +17,9 @@ signal signalToken(token)
 # Get the gravity from the project settings so you can sync with rigid body nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") 
 
-
+func _ready():
+	vie =+ 3
+	token =+ 0
 
 func _physics_process(delta):
 	emit_signal("signalVie", vie)

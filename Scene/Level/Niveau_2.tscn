@@ -1,18 +1,18 @@
-[gd_scene load_steps=50 format=3 uid="uid://csoruq7jj1y6y"]
+[gd_scene load_steps=53 format=3 uid="uid://csoruq7jj1y6y"]
 
 [ext_resource type="Texture2D" uid="uid://bj1268vp6b53m" path="res://Assets/Sprite/Tilemap/Lab Tiles/938.png" id="1_857di"]
 [ext_resource type="Script" path="res://Scripts/Note_niveai_2.gd" id="1_ghlih"]
-[ext_resource type="Script" path="res://Scene/Level/Niveau_2.gd" id="1_wvq2b"]
-[ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/Tileset.png" id="2_mf2de"]
-[ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/industrial.v2.png" id="4_7semi"]
-[ext_resource type="Texture2D" uid="uid://btc08v21xflko" path="res://Assets/Background/Lab/1038-0.png" id="4_v563v"]
+[ext_resource type="Script" path="res://Scripts/Niveau_2.gd" id="1_luuwd"]
+[ext_resource type="Texture2D" uid="uid://dmop4qhfbeajv" path="res://Assets/Background/1038-0.png" id="3_nf2hg"]
+[ext_resource type="Texture2D" uid="uid://cb4bnkuxm7hwg" path="res://Assets/Background/798-0.png" id="4_etwrf"]
+[ext_resource type="Texture2D" uid="uid://5kayf4nnkwou" path="res://Assets/Background/984-0.png" id="4_fxtpn"]
+[ext_resource type="Texture2D" uid="uid://yjuy1gxgwcom" path="res://Assets/Background/799-0.png" id="5_f402b"]
+[ext_resource type="Texture2D" uid="uid://dm5wbsy4ar3p8" path="res://Assets/Sprite/Tilemap/tileLv1/Tileset.png" id="6_de6ag"]
 [ext_resource type="Texture2D" uid="uid://di6h3ixhbdvqv" path="res://Assets/Sprite/Tilemap/Lab Tiles/475.png" id="6_hl073"]
-[ext_resource type="Texture2D" uid="uid://ctqaqjt3gpl5t" path="res://Assets/Background/Lab/799-0.png" id="7_u347w"]
-[ext_resource type="Texture2D" uid="uid://c6r3rsefvep2i" path="res://Assets/Background/Lab/798-0.png" id="8_mrgvd"]
+[ext_resource type="Texture2D" uid="uid://c8obdeog6b0e6" path="res://Assets/Sprite/Tilemap/tileLv1/industrial.v2.png" id="7_58ldh"]
+[ext_resource type="Texture2D" uid="uid://dl5eaa48kifak" path="res://Assets/Sprite/Tilemap/Lab Items/495-15.png" id="8_qrjqi"]
 [ext_resource type="Texture2D" uid="uid://tjovsg1tjk5" path="res://Assets/Sprite/Tilemap/Lab Tiles/800.png" id="8_tx31m"]
-[ext_resource type="Texture2D" uid="uid://7o4nf08o0oyv" path="res://Assets/Background/Lab/984-0.png" id="9_p3411"]
 [ext_resource type="Texture2D" uid="uid://joaqkrvd2j3t" path="res://Assets/Background/download.jpg" id="11_1lgb1"]
-[ext_resource type="Texture2D" uid="uid://t2yimqhr1b5a" path="res://Assets/Sprite/Tilemap/Lab Items/495-15.png" id="11_7jlvl"]
 [ext_resource type="PackedScene" uid="uid://bgul8p6kju3er" path="res://Scene/Item/cle.tscn" id="11_vphp7"]
 [ext_resource type="PackedScene" uid="uid://bdjkjpsg330ds" path="res://Scene/Item/dash_Item.tscn" id="12_6ukae"]
 [ext_resource type="Texture2D" uid="uid://b8j3ig0w4w61u" path="res://Assets/Sprite/Tilemap/Lab Items/506-0.png" id="12_c7c44"]
@@ -22,14 +22,17 @@
 [ext_resource type="PackedScene" uid="uid://cdry2kdv7r7rb" path="res://Scene/Item/token.tscn" id="14_0t32r"]
 [ext_resource type="Texture2D" uid="uid://cp2i7w14g1dei" path="res://Assets/Sprite/Tilemap/Lab Items/555-0.png" id="14_pb2hw"]
 [ext_resource type="Texture2D" uid="uid://dkcfyu8uwqlu5" path="res://Assets/Sprite/Tilemap/Lab Items/859-1.png" id="15_dwa71"]
-[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/Level/mur_invisible.tscn" id="15_ur66n"]
+[ext_resource type="PackedScene" uid="uid://cxx0qq1oo0wqp" path="res://Scene/obstacle/mur_invisible.tscn" id="15_ur66n"]
 [ext_resource type="Texture2D" uid="uid://ci8wqbrch70ni" path="res://Assets/Sprite/Tilemap/Lab Items/873-0.png" id="16_71nj4"]
 [ext_resource type="Texture2D" uid="uid://c3slhjyqpv8kv" path="res://Assets/Sprite/Tilemap/Lab Items/915-2.png" id="17_f6o3i"]
 [ext_resource type="Texture2D" uid="uid://1x6lernifd6h" path="res://Assets/Sprite/Tilemap/Lab Items/783-0.png" id="18_fb24s"]
 [ext_resource type="Texture2D" uid="uid://dcxi08trsuew6" path="res://Assets/Sprite/Tilemap/Lab Items/931-0.png" id="20_hbmik"]
 [ext_resource type="Texture2D" uid="uid://bhaajn0nd7ohu" path="res://Assets/Sprite/Tilemap/Lab Items/1005-0.png" id="21_olj0n"]
+[ext_resource type="PackedScene" uid="uid://bl68edn1iwy0f" path="res://Scene/Item/sentry.tscn" id="25_ovjxy"]
 [ext_resource type="PackedScene" uid="uid://b0ejcfyckvnic" path="res://Scene/Item/flag_fin_niveau.tscn" id="29_l3dot"]
 [ext_resource type="PackedScene" uid="uid://dmws0144cekmu" path="res://Scene/obstacle/porte_barre.tscn" id="30_eudm5"]
+[ext_resource type="PackedScene" uid="uid://bicw121kefupp" path="res://Scene/Item/plat_dessend_auto.tscn" id="31_pe146"]
+[ext_resource type="PackedScene" uid="uid://c1ot83imugdos" path="res://Scene/Perso/ennemis.tscn" id="33_v7rsk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qkhok"]
 
@@ -1031,7 +1034,7 @@ texture = ExtResource("8_tx31m")
 9:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwtmb"]
-texture = ExtResource("2_mf2de")
+texture = ExtResource("6_de6ag")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2060,7 +2063,7 @@ texture = ExtResource("2_mf2de")
 16:17/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urrw7"]
-texture = ExtResource("4_7semi")
+texture = ExtResource("7_58ldh")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3325,37 +3328,19 @@ sources/5 = SubResource("TileSetAtlasSource_urrw7")
 sources/6 = SubResource("TileSetAtlasSource_jmk2j")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmbr4"]
-texture = ExtResource("11_7jlvl")
-0:0/0 = 0
+texture = ExtResource("8_qrjqi")
 1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
+0:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-3:5/0 = 0
-5:5/0 = 0
+5:0/0 = 0
+4:0/0 = 0
+3:0/0 = 0
+2:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8e26x"]
 texture = ExtResource("12_c7c44")
@@ -3663,34 +3648,34 @@ visibility_layer = 2
 z_index = -1
 z_as_relative = false
 position = Vector2(884, 962)
-script = ExtResource("1_wvq2b")
+script = ExtResource("1_luuwd")
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("1_ghlih")
 
 [node name="1038-0" type="Sprite2D" parent="."]
 position = Vector2(655, -242)
-texture = ExtResource("4_v563v")
+texture = ExtResource("3_nf2hg")
 
 [node name="798-0" type="Sprite2D" parent="."]
 position = Vector2(243, -311)
 scale = Vector2(0.34375, 0.791667)
-texture = ExtResource("8_mrgvd")
+texture = ExtResource("4_etwrf")
 
 [node name="conduit-1" type="Sprite2D" parent="."]
 position = Vector2(735, -325.5)
 scale = Vector2(0.3125, 0.189583)
-texture = ExtResource("9_p3411")
+texture = ExtResource("4_fxtpn")
 
 [node name="conduit-0" type="Sprite2D" parent="."]
 position = Vector2(852, -308)
 scale = Vector2(0.64375, 0.116667)
-texture = ExtResource("9_p3411")
+texture = ExtResource("4_fxtpn")
 
 [node name="799-0" type="Sprite2D" parent="."]
 position = Vector2(944.5, -426.5)
 scale = Vector2(0.348438, 0.377083)
-texture = ExtResource("7_u347w")
+texture = ExtResource("5_f402b")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bvqpn")
@@ -3714,6 +3699,8 @@ position = Vector2(1039, -310)
 
 [node name="dash_Item" parent="." instance=ExtResource("12_6ukae")]
 position = Vector2(929, -359)
+
+[node name="Sentry" parent="dash_Item" instance=ExtResource("25_ovjxy")]
 
 [node name="Ladder" parent="." instance=ExtResource("12_hwnmf")]
 position = Vector2(194, -237)
@@ -3744,6 +3731,27 @@ position = Vector2(1267, 0.108063)
 
 [node name="porte_Barre" parent="." instance=ExtResource("30_eudm5")]
 position = Vector2(648, -434)
+
+[node name="plat-dessend-auto" parent="." instance=ExtResource("31_pe146")]
+position = Vector2(1151, -442)
+
+[node name="plat-dessend-auto2" parent="." instance=ExtResource("31_pe146")]
+position = Vector2(1119, -442)
+
+[node name="plat-dessend-auto3" parent="." instance=ExtResource("31_pe146")]
+position = Vector2(1088, -442)
+
+[node name="Sentry" parent="." instance=ExtResource("25_ovjxy")]
+position = Vector2(1144, -1)
+
+[node name="Sentry2" parent="." instance=ExtResource("25_ovjxy")]
+position = Vector2(1101, -1)
+
+[node name="Ennemis2" parent="." instance=ExtResource("33_v7rsk")]
+position = Vector2(479, -365)
+
+[node name="Ennemis" parent="." instance=ExtResource("33_v7rsk")]
+position = Vector2(570, -179)
 
 [connection signal="signalecle" from="clé" to="porte_Barre" method="_on_clé_signalecle"]
 [connection signal="flagsignal" from="flagFinNiveau" to="." method="_on_flag_fin_niveau_flagsignal"]

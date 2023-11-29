@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl5eaa48kifak"
-path="res://.godot/imported/495-15.png-1af5f863e40c9a16f432c9c0b3d3e7cc.ctex"
+uid="uid://3pfbhexsb8np"
+path="res://.godot/imported/sheetcoear.png-03b18a6c022945f72fd5e97676a185a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilemap/Lab Items/495-15.png"
-dest_files=["res://.godot/imported/495-15.png-1af5f863e40c9a16f432c9c0b3d3e7cc.ctex"]
+source_file="res://Assets/Sprite/Sprite/SpriteItem/sheetcoear.png"
+dest_files=["res://.godot/imported/sheetcoear.png-03b18a6c022945f72fd5e97676a185a4.ctex"]
 
 [params]
 

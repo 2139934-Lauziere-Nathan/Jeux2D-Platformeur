@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl5eaa48kifak"
-path="res://.godot/imported/495-15.png-1af5f863e40c9a16f432c9c0b3d3e7cc.ctex"
+uid="uid://j2mb5prmi27s"
+path="res://.godot/imported/Floor_2_16x16.png-fc1f2c537cd46e63e529bc559a06ede0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Tilemap/Lab Items/495-15.png"
-dest_files=["res://.godot/imported/495-15.png-1af5f863e40c9a16f432c9c0b3d3e7cc.ctex"]
+source_file="res://Assets/Sprite/Tilemap/int/Floor_2_16x16.png"
+dest_files=["res://.godot/imported/Floor_2_16x16.png-fc1f2c537cd46e63e529bc559a06ede0.ctex"]
 
 [params]
 

@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var body = $CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,11 +10,18 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_stop_point_assenseur_stop():
-	body.velocity.y = 0
-	pass # Replace with function body.
 
 
-func _on_stop_point_assenseur_2_stop():
-	body.velocity.y = 0
+
+
+
+func _on_cle_signalecle(barre):
+		if barre == false:
+			queue_free()
+
+
+
+func _on_clé_signalecle(barre):
+	if barre == false:
+			queue_free()
 	pass # Replace with function body.

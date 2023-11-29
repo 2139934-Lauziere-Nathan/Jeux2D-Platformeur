@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://u10s6j3esueb"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2DBullet.gd" id="1_gw05e"]
-[ext_resource type="Texture2D" uid="uid://bccea2up8u0aq" path="res://Assets/Sprite/Sprite/spriteEnemis/Medium_Shell.png" id="2_c2wcv"]
+[ext_resource type="Texture2D" uid="uid://bccea2up8u0aq" path="res://Assets/Sprite/Sprite/SpriteItem/Medium_Shell.png" id="2_c2wcv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7yrak"]
 
